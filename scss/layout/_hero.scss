@@ -1,17 +1,13 @@
 .hero {
     $primary-color-white: #fff;
-    margin-top: 36px;
-    width: 100%;
-    border-radius: 16px;
-    background: #212844;
+
     &__left {
         padding: 40px 0;
         margin-left: 90px;
     }
     &__inner {
+        white-space: nowrap;
         position: relative;
-        display: flex;
-        justify-content: space-between;
     }
     &__desc {
         color: $primary-color-white;
@@ -31,23 +27,23 @@
         font-size: 3rem;
         font-weight: 600;
         line-height: 1;
-        margin-bottom: 73px;
+        // margin-bottom: 73px;
     }
-    .hero__dots {
-        display: flex;
-        column-gap: 10px;
-        .hero__dot {
-            width: 8px;
-            height: 8px;
-            background: #fff;
-            border-radius: 50%;
-        }
+    .hero__intro {
+        color: #fff;
+        font-size: 2rem;
+        margin-top: 30px;
     }
 
     &__media {
         margin-right: 125px;
         margin-top: 24px;
         margin-bottom: 24px;
+        .hero__img {
+            width: 300px;
+            object-fit: contain;
+            height: 300px;
+        }
     }
     .hero__control {
         width: 86px;
@@ -59,18 +55,17 @@
         justify-content: center;
         flex-shrink: 0;
     }
-    .hero__control-next {
-        position: absolute;
-        right: -42px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .hero__control-prev{
-        position: absolute;
-        left: -42px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
 }
-
-
+.hero__list {
+    width: 100%;
+    display: flex;
+    margin-top: 36px;
+}
+.hero__item {
+    display: flex;
+    border-radius: 16px;
+    justify-content: space-between;
+    background: #212844;
+    flex-wrap: nowrap;
+    width: 100%;
+}

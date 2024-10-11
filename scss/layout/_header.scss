@@ -9,7 +9,6 @@
     top: -1px;
     z-index: 10;
     background: #fff;
-    
 }
 .top-bar,
 .logo {
@@ -133,11 +132,11 @@
     max-height: 100vh;
 }
 .icon__shop-close {
-    width: 70px;
+    width: 50px;
     position: absolute;
     left: 0;
     top: 0;
-    height: 70px;
+    height: 50px;
     padding: 10px;
     cursor: pointer;
 }
@@ -173,18 +172,21 @@
 
 .total {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    background: #008ecc;
+    margin-right: -20px;
     margin-top: 30px;
     font-size: 2.4rem;
     font-weight: 600;
-    padding-bottom: 50px;
-    position: sticky;
-    bottom: 0;
+    // position: sticky;
     height: 100px;
-    right: 0;
 }
 .card-wrapper {
     overflow: auto;
-
+}
+.total-wrap {
+    position: sticky;
+    bottom: 0;
 }

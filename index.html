@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="vi">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>ShopPlus - Mua Sắm Thông Minh</title>
+
+        <!-- Favicon và Các Liên Kết Khác -->
         <link
             rel="icon"
             type="image/png"
@@ -23,31 +25,44 @@
         />
         <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-        <!-- Font -->
+        <!-- Font Preconnect -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <!-- Fonts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <!-- css -->
+
+        <!-- Swiper CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
-    <body>
+    <body class="">
         <!-- Header -->
         <header class="header__fixed">
-            <div class="menu-overlay">
-
-            </div>
+            <div class="menu-overlay"></div>
             <div class="menu-drawer">
-                <svg class="icon__shop-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                <button class="icon__shop-close" aria-label="Đóng menu">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                    >
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        />
+                    </svg>
+                </button>
                 <div class="card-wrapper">
                     <ul class="card__title">
                         <li class="card__title-desc">Tên sản phẩm</li>
@@ -59,191 +74,260 @@
                 <span class="total">Tổng: 0 VNĐ</span>
             </div>
             <div class="container">
-                
-                    <div class="top-bar">
-                            <div class="logo">
-                                <img
-                                    src="./assets/icons/logo.svg"
-                                    alt="logo"
-                                    class="logo__img"
-                                />
-                                <h1 class="logo__title">ShopPlus</h1>
-                            </div>
-        
-                            <!-- Search input -->
-                            <form action="" class="search">
-                                <img
-                                    src="./assets/icons/search.svg"
-                                    alt=""
-                                    class="search__icon"
-                                />
-                                <input
-                                    type="text"
-                                    name=""
-                                    id=""
-                                    class="search__input"
-                                    placeholder="Tìm kiếm nhu yếu phẩm, hàng tạp hóa và nhiều thứ khác..."
-                                />
-                                <img
-                                    src="./assets/icons/search-list.svg"
-                                    alt=""
-                                    class="search__list"
-                                />
-                            </form>
-        
-                            <!-- Action -->
-                            <div class="action__list">
-                                <!-- Item 1 -->
-                                <div class="action__item" id="active">
-                                    <img
-                                        src="./assets/icons/shopping.svg"
-                                        alt=""
-                                        class="action__icon"
-                                    />
-                                    <a href="#!" class="action__desc">Giỏ hàng</a>
-                                </div>
-
-                                <div class="action__line"></div>
-
-                                <!-- Item 2 -->
-                                <div class="action__item">
-                                    <img
-                                        src="./assets/icons/sign-in-up.svg"
-                                        alt=""
-                                        class="action__icon"
-                                    />
-                                    <a href="#!" class="action__desc"
-                                        >Đăng kí/Đăng nhập</a
-                                    >
-                                </div>
-
-                            </div>
+                <div class="top-bar">
+                    <div class="logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="Logo ShopPlus"
+                            class="logo__img"
+                            loading="lazy"
+                        />
+                        <h1 class="logo__title">ShopPlus</h1>
                     </div>
+
+                    <!-- Search input -->
+                    <form
+                        action=""
+                        class="search"
+                        role="search"
+                        aria-label="Tìm kiếm"
+                    >
+                        <img
+                            src="./assets/icons/search.svg"
+                            alt="Icon tìm kiếm"
+                            class="search__icon"
+                            loading="lazy"
+                        />
+                        <input
+                            type="text"
+                            name="search"
+                            id="search"
+                            class="search__input"
+                            placeholder="Tìm kiếm nhu yếu phẩm, hàng tạp hóa và nhiều thứ khác..."
+                        />
+                        <button
+                            type="submit"
+                            class="search__submit"
+                            aria-label="Tìm kiếm"
+                        >
+                            <img
+                                src="./assets/icons/search-list.svg"
+                                alt="Biểu tượng gửi"
+                                class="search__list"
+                                loading="lazy"
+                            />
+                        </button>
+                    </form>
+
+                    <!-- Action -->
+                    <div class="action__list">
+                        <!-- Item 1 -->
+                        <div class="action__item" id="active">
+                            <img
+                                src="./assets/icons/shopping.svg"
+                                alt="Giỏ hàng"
+                                class="action__icon"
+                                loading="lazy"
+                            />
+                            <a href="#!" class="action__desc">Giỏ hàng</a>
+                        </div>
+
+                        <div class="action__line"></div>
+
+                        <!-- Item 2 -->
+                        <div class="action__item">
+                            <img
+                                src="./assets/icons/sign-in-up.svg"
+                                alt="Đăng nhập/Đăng kí"
+                                class="action__icon"
+                                loading="lazy"
+                            />
+                            <a href="#!" class="action__desc"
+                                >Đăng kí/Đăng nhập</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
-            <div class="container">
-                    <!-- Navbar -->
-                    <nav class="navbar">
-                        <ul class="navbar__list">
-                            <li class="navbar__item">
-                                <p class="navbar__title">Mua sắm</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Trái cây cao cấp</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Nội thất</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Thời trang</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Điện tử</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Sắc đẹp</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Cải thiện nhà cửa</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                            <li class="navbar__item">
-                                <p class="navbar__title">Thể thao, đồ chơi</p>
-                                <div class="navbar__arown"></div>
-                            </li>
-                        </ul>
-                    </nav>
-    
-                    <section class="hero">
-                        <!-- Hero left -->
-                        <div class="hero__inner">
-                            <div class="hero__control hero__control-prev">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M15.5 5L8.5 12L15.5 19"
-                                        stroke="#008ECC"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </div>
+
+        <div class="container">
+            <!-- Navbar -->
+            <nav class="navbar" aria-label="Danh mục sản phẩm">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Mua sắm</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Trái cây cao cấp</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Nội thất</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Thời trang</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Điện tử</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Sắc đẹp</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Cải thiện nhà cửa</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            <span class="navbar__title">Thể thao, đồ chơi</span>
+                            <span class="navbar__arrow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hero -->
+            <section class="hero">
+                <div class="swiper hero__swiper">
+                    <!-- Wrapper chứa các slide -->
+                    <div class="swiper-wrapper hero__list">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide hero__item">
                             <div class="hero__left">
                                 <div class="hero__content">
                                     <p class="hero__desc">
-                                        Ưu đãi trực tiến tốt nhất cho đồng hồ thông
-                                        minh
+                                        Ưu đãi trực tuyến tốt nhất cho đồng hồ
+                                        thông minh
                                     </p>
-                                    <h1 class="hero__heading">
+                                    <h2 class="hero__heading">
                                         ĐỒNG HỒ THÔNG MINH.
-                                    </h1>
-                                    <p class="hero__sale">Giảm giá lên đến 80%</p>
+                                    </h2>
+                                    <p class="hero__sale">
+                                        Giảm giá lên đến 80%
+                                    </p>
                                 </div>
-                                <ul class="hero__dots">
-                                    <li class="hero__dot"></li>
-                                    <li class="hero__dot"></li>
-                                    <li class="hero__dot"></li>
-                                    <li class="hero__dot"></li>
-                                    <li class="hero__dot"></li>
-                                </ul>
                             </div>
-    
+
                             <!-- Hero right -->
                             <div class="hero__media">
                                 <img
                                     src="./assets/img/hero-item.png"
-                                    alt=""
+                                    alt="Hình ảnh đồng hồ thông minh"
                                     class="hero__img"
+                                    loading="lazy"
                                 />
                             </div>
-                            <div class="hero__control hero__control-next">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M8.5 5L15.5 12L8.5 19"
-                                        stroke="#008ECC"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide hero__item">
+                            <div class="hero__left">
+                                <div class="hero__content">
+                                    <p class="hero__desc">
+                                        Ngắm nhìn cận cảnh cùng smartphone
+                                    </p>
+                                    <h2 class="hero__heading">
+                                        Iphone 16 Pro Max
+                                    </h2>
+                                    <p class="hero__sale">Ưu đãi cực cao</p>
+                                    <p class="hero__intro">
+                                        iPhone 16 Pro Max 6,9”3 & iPhone 16 Pro
+                                        6,3”3 Titan Tự Nhiên
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Hero right -->
+                            <div class="hero__media">
+                                <img
+                                    src="./assets/img/ip16.png"
+                                    alt="Hình ảnh đồng hồ thông minh"
+                                    class="hero__img"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
-                    </section>
-            </div>
-            
+                        <div class="swiper-slide hero__item">
+                            <div class="hero__left">
+                                <div class="hero__content">
+                                    <p class="hero__desc">
+                                        Kiệt tác huyền thoại
+                                    </p>
+                                    <h2 class="hero__heading">
+                                        Xiaomi 14 Ultra
+                                    </h2>
+                                    <p class="hero__sale">
+                                        Cấu hình siêu khủng
+                                    </p>
+                                    <p class="hero__intro">
+                                        Thiết kế huyền thoại Tính năng chụp ảnh
+                                        đỉnh cao
+                                    </p>
+                                </div>
+                            </div>
 
+                            <!-- Hero right -->
+                            <div class="hero__media">
+                                <img
+                                    src="./assets/img/xiaomi14.png"
+                                    alt="Hình ảnh đồng hồ thông minh"
+                                    class="hero__img"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <ul class="hero__dots">
+                        <li class="hero__dot"></li>
+                        <li class="hero__dot"></li>
+                    </ul> -->
+                    <!-- Phân trang (Pagination) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
 
         <main>
             <section class="product">
                 <div class="container">
-                    <p class="product__inner">
+                    <div class="product__inner">
                         <div class="product__top">
                             <h2 class="product__desc">
-                                Nhận Ưu Đãi Tốt Nhất Từ <strong>Điện Thoại Thông Minh</strong>
+                                Nhận Ưu Đãi Tốt Nhất Từ
+                                <strong>Điện Thoại Thông Minh</strong>
                             </h2>
                             <ul class="product__list">
                                 <!-- Item 1 -->
                                 <li class="product__item">
                                     <div class="product__sale">50% OFF</div>
-                                    <div class="product__thumb"><img src="./assets/img/product-01.svg" alt="" class="product__img"></div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/product-01.svg"
+                                            alt="Galaxy S22 Ultra"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
                                             Galaxy S22 Ultra
@@ -251,105 +335,219 @@
                                         <div class="product__price">
                                             19.872.800 VNĐ
                                         </div>
-                                        <button class="product__buy">Thêm vào giỏ hàng</button>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Galaxy S22 Ultra vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
                                     </div>
                                 </li>
                                 <!-- Item 2 -->
                                 <li class="product__item">
-                                    <div class="product__sale">50% OFF</div>
-                                    <div class="product__thumb"><img src="./assets/img/product-02.svg" alt="" class="product__img"></div>
+                                    <div class="product__sale">30% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/product-02.svg"
+                                            alt="iPhone 14 Pro"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy S22 Ultra
+                                            Galaxy M13 (4GB | 64 GB)
                                         </h3>
                                         <div class="product__price">
-                                            19.872.800 VNĐ
+                                            25.000.000 VNĐ
                                         </div>
-                                        <button class="product__buy">Thêm vào giỏ hàng</button>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm iPhone 14 Pro vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
                                     </div>
                                 </li>
                                 <!-- Item 3 -->
                                 <li class="product__item">
-                                    <div class="product__sale">50% OFF</div>
-                                    <div class="product__thumb"><img src="./assets/img/product-03.svg" alt="" class="product__img"></div>
+                                    <div class="product__sale">40% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/product-03.svg"
+                                            alt="Xiaomi Mi 11"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy S22 Ultra
+                                            Galaxy M33 (4GB | 64GB)
                                         </h3>
                                         <div class="product__price">
-                                            19.872.800 VNĐ
+                                            15.500.000 VNĐ
                                         </div>
-                                        <button class="product__buy">Thêm vào giỏ hàng</button>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Xiaomi Mi 11 vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
                                     </div>
                                 </li>
                                 <!-- Item 4 -->
                                 <li class="product__item">
-                                    <div class="product__sale">50% OFF</div>
-                                    <div class="product__thumb"><img src="./assets/img/product-04.svg" alt="" class="product__img"></div>
+                                    <div class="product__sale">20% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/product-04.svg"
+                                            alt="Samsung Galaxy Watch"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy S22 Ultra
+                                            Galaxy M53 (4GB | 64 GB)
                                         </h3>
                                         <div class="product__price">
-                                            19.872.800 VNĐ
+                                            7.500.000 VNĐ
                                         </div>
-                                        <button class="product__buy">Thêm vào giỏ hàng</button>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Samsung Galaxy Watch vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
                                     </div>
                                 </li>
                                 <!-- Item 5 -->
                                 <li class="product__item">
-                                    <div class="product__sale">50% OFF</div>
-                                    <div class="product__thumb"><img src="./assets/img/product-05.svg" alt="" class="product__img"></div>
+                                    <div class="product__sale">10% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/product-05.svg"
+                                            alt="Sony WH-1000XM4"
+                                            class="product__img"
+                                            loading="lazy"
+                                        /> 
+                                        
+                                    </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
                                             Galaxy S22 Ultra
                                         </h3>
                                         <div class="product__price">
-                                            19.872.800 VNĐ
+                                            6.000.000 VNĐ
                                         </div>
-                                        <button class="product__buy">Thêm vào giỏ hàng</button>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Sony WH-1000XM4 vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
                                     </div>
                                 </li>
-                                <!-- z -->
+                                <!-- Thêm các sản phẩm khác tại đây -->
                             </ul>
                         </div>
-                        <div class="toast">
+                        <div class="toast" role="alert" aria-live="assertive">
                             <div class="toast-body">
-                                <svg class="icon-msg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                <svg
+                                    class="icon-msg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"
+                                >
+                                    <path
+                                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                                    />
+                                </svg>
                                 <span class="msg">Thêm vào thành công</span>
                             </div>
                         </div>
                         <div class="product__bottom">
                             <div class="product__desc">
-                                Mua Sắm Từ <strong>Các Danh Mục Hàng Đầu</strong>
+                                Mua Sắm Từ
+                                <strong>Các Danh Mục Hàng Đầu</strong>
                             </div>
                             <ul class="product-cate__list">
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-12.svg" alt="" class="product-cate__img"></div>
-                                    <p class="product-cate__title">Điện thoại</p>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-12.svg"
+                                            alt="Điện thoại"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">
+                                        Điện thoại
+                                    </p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-06.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-06.svg"
+                                            alt="Mỹ phẩm"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Mỹ phẩm</p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-07.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-07.svg"
+                                            alt="Điện tử"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Điện tử</p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-08.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-08.svg"
+                                            alt="Nội thất"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Nội thất</p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-09.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-09.svg"
+                                            alt="Đồng hồ"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Đồng hồ</p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-10.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-10.svg"
+                                            alt="Trang trí"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Trang trí</p>
                                 </li>
                                 <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap"><img src="./assets/img/product-11.svg" alt="" class="product-cate__img"></div>
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-11.svg"
+                                            alt="Trang sức"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <p class="product-cate__title">Trang sức</p>
                                 </li>
                             </ul>
@@ -360,9 +558,9 @@
 
             <section class="slider">
                 <div class="container">
-                    <p class="product__desc">
+                    <h2 class="product__desc">
                         Các Thương Hiệu <strong>Hàng Đầu</strong>
-                    </p>
+                    </h2>
                     <div class="slider__inner">
                         <!-- Slider list -->
                         <div class="slider__list">
@@ -371,13 +569,25 @@
                                 <!-- Left -->
                                 <div class="slider__decor"></div>
                                 <div class="slider__item-left">
-                                        <div class="slider__name">IPHONE</div>
-                                        <img src="./assets/img/logo-01.png" alt="" class="slider__logo">
-                                        <div class="slider__sale">UP to 80% OFF</div>
+                                    <div class="slider__name">IPHONE</div>
+                                    <img
+                                        src="./assets/img/logo-01.png"
+                                        alt="Logo iPhone"
+                                        class="slider__logo"
+                                        loading="lazy"
+                                    />
+                                    <div class="slider__sale">
+                                        UP to 80% OFF
+                                    </div>
                                 </div>
                                 <!-- Right -->
                                 <div class="slider__media-right">
-                                    <img src="./assets/img/iphone.svg" alt="" class="slider__media-img">
+                                    <img
+                                        src="./assets/img/iphone.svg"
+                                        alt="iPhone"
+                                        class="slider__media-img"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <!-- Item 2 -->
@@ -385,13 +595,25 @@
                                 <!-- Left -->
                                 <div class="slider__decor"></div>
                                 <div class="slider__item-left">
-                                        <div class="slider__name">REALME</div>
-                                        <img src="./assets/img/logo-02.png" alt="" class="slider__logo">
-                                        <div class="slider__sale">UP to 80% OFF</div>
+                                    <div class="slider__name">REALME</div>
+                                    <img
+                                        src="./assets/img/logo-02.png"
+                                        alt="Logo Realme"
+                                        class="slider__logo"
+                                        loading="lazy"
+                                    />
+                                    <div class="slider__sale">
+                                        UP to 80% OFF
+                                    </div>
                                 </div>
                                 <!-- Right -->
                                 <div class="slider__media-right">
-                                    <img src="./assets/img/realme.svg" alt="" class="slider__media-img">
+                                    <img
+                                        src="./assets/img/realme.svg"
+                                        alt="Realme"
+                                        class="slider__media-img"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <!-- Item 3 -->
@@ -399,19 +621,32 @@
                                 <div class="slider__decor"></div>
                                 <!-- Left -->
                                 <div class="slider__item-left">
-                                        <div class="slider__name">XIAOMI</div>
-                                        <img src="./assets/img/logo-03.png" alt="" class="slider__logo">
-                                        <div class="slider__sale">UP to 80% OFF</div>
+                                    <div class="slider__name">XIAOMI</div>
+                                    <img
+                                        src="./assets/img/logo-03.png"
+                                        alt="Logo Xiaomi"
+                                        class="slider__logo"
+                                        loading="lazy"
+                                    />
+                                    <div class="slider__sale">
+                                        UP to 80% OFF
+                                    </div>
                                 </div>
                                 <!-- Right -->
                                 <div class="slider__media-right">
-                                    <img src="./assets/img/xiaomi.svg" alt="" class="slider__media-img">
+                                    <img
+                                        src="./assets/img/xiaomi.svg"
+                                        alt="Xiaomi"
+                                        class="slider__media-img"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                         </div>
                         <!-- Dots -->
-                        <ul class="slider__dots">
+                        <ul class="slider__dots" aria-label="Chỉ số trang">
                             <li class="slider__dot slider__dot-active"></li>
+                            <li class="slider__dot"></li>
                             <li class="slider__dot"></li>
                         </ul>
                     </div>
@@ -419,5 +654,8 @@
             </section>
         </main>
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/swiper.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
 </html>
