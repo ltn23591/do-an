@@ -41,7 +41,6 @@
                 position: absolute;
                 top: 0;
                 z-index: 1;
-
                 right: 0;
                 width: 51px;
                 height: 53px;
@@ -62,7 +61,6 @@
                 align-items: center;
                 justify-content: center;
                 .product__img {
-                    // margin-bottom: 15px;
                     object-fit: contain;
                 }
             }
@@ -71,6 +69,7 @@
                 margin-top: 12px;
                 .product__title {
                     font-family: Poppins;
+                    white-space: nowrap;
                     font-size: 1.6rem;
                     font-weight: 700;
                     line-height: 1.12;
@@ -126,6 +125,7 @@
                     justify-content: center;
                 }
                 .product-cate__title {
+                    color: var(--text-black);
                     margin-top: 20px;
                 }
             }
@@ -141,7 +141,6 @@
     top: 102px;
     right: 15px;
     transform: translateX(115%);
-    // margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;

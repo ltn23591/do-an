@@ -2,6 +2,8 @@
 ::before,
 ::after {
     box-sizing: border-box;
+    border: none;
+    outline: none;
 }
 html {
     font-size: 62.5%;

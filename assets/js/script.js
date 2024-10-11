@@ -127,3 +127,4 @@ function updateTotal() {
     document.querySelector(".total").innerText =
         "Tổng tiền: " + total.toLocaleString() + " VNĐ";
 }
+
