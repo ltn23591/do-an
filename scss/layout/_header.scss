@@ -8,7 +8,7 @@
     padding: 20px 0;
     top: -1px;
     z-index: 10;
-    background: #fff;
+    background: #b4d9de;
 }
 .top-bar,
 .logo {
@@ -94,9 +94,8 @@
                 border-color: #fff;
             }
         }
-        // position: relative;
         width: auto;
-        padding: 9px 14px;
+        padding: 14px 14px;
         border-radius: 18px;
         display: flex;
         align-items: center;
@@ -107,9 +106,8 @@
         white-space: nowrap;
         display: flex;
         color: #222;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 1.28;
+        font-size: 2rem;
+        font-weight: 550;
     }
 }
 
