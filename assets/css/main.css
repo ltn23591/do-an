@@ -493,7 +493,7 @@ a {
   object-fit: contain;
 }
 .product .product__list .product__item .product__content {
-  background: #fff;
+  background: inherit;
   margin-top: 12px;
 }
 .product .product__list .product__item .product__content .product__title {
