@@ -1,0 +1,82 @@
+footer {
+    background-color: #0082c6;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1231px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    // flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.footer-column ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-us p,
+.download-app p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.download-app a img {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.25;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-column hr {
+    border-width: 2px;
+    border-color: aliceblue;
+    border-style: solid;
+    margin: 10px 0;
+    opacity: 0.5;
+}
+hr {
+    border-color: rgba(25, 163, 225, 0.8);
+}
+
+.footer__icon-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.footer__icon {
+    fill: #fff;
+}
+.footer__strong {
+    margin-left: 27px;
+}

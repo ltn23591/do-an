@@ -18,6 +18,7 @@
             color: #222222;
         }
         .slider__sale {
+            z-index: 2;
             color: #000;
         }
         .slider__decor {
@@ -43,6 +44,18 @@
     }
 }
 .slider__item {
+    &:hover {
+        .slider__media-img {
+            transform: scale(1.2);
+        }
+        .slider__decor {
+            top: 187px;
+            right: 259px;
+        }
+    }
+    .slider__media-img {
+        transition: ease all 0.7s;
+    }
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -54,6 +67,8 @@
     padding: 20px;
     overflow: hidden;
     .slider__decor {
+        z-index: 1;
+        transition: ease all 0.7s;
         position: absolute;
         width: 226px;
         top: -43px;
@@ -78,16 +93,20 @@
         }
         .slider__logo {
             width: 114px;
+            z-index: 2;
+            position: relative;
             height: 67px;
             object-fit: contain;
             margin-top: 30px;
         }
         .slider__sale {
             color: #fff;
+            z-index: 4;
             font-size: 2.4rem;
             font-weight: 600;
             line-height: 1.25;
             margin-top: 60px;
+            position: relative;
         }
     }
     .slider__media-right {
