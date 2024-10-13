@@ -1,7 +1,9 @@
 @use "./base/reset";
 @use "./base/base";
+@use "./base/common";
 @use "./base/grid";
 @use "./layout/header";
 @use "./layout/hero";
 @use "./layout/product";
 @use "./layout/slider";
+@use "./layout/daily";

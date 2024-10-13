@@ -153,6 +153,22 @@ a {
   text-decoration: none;
 }
 
+.section-desc {
+  position: relative;
+  border-bottom: 3px solid #008ecc;
+  width: fit-content;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-bottom: 14px;
+  color: #666;
+}
+.section-desc strong {
+  font-weight: 700;
+  color: #008ecc;
+  line-height: 30px;
+}
+
 .container {
   width: 100%;
   max-width: 1231px;
@@ -426,21 +442,6 @@ a {
 .product {
   margin-top: 70px;
 }
-.product .product__desc {
-  position: relative;
-  border-bottom: 3px solid #008ecc;
-  width: fit-content;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.25;
-  padding-bottom: 14px;
-  color: #666;
-}
-.product .product__desc strong {
-  font-weight: 700;
-  color: #008ecc;
-  line-height: 30px;
-}
 .product .product__list {
   margin-top: 40px;
   display: grid;
@@ -453,10 +454,10 @@ a {
   width: 227px;
   height: 300px;
   display: flex;
+  align-items: center;
+  flex-direction: column;
   border-radius: 16px;
   background: #f5f5f5;
-  flex-direction: column;
-  align-items: center;
   position: relative;
   transition: ease 0.5s all;
 }
@@ -584,22 +585,6 @@ a {
 .toast .icon-msg {
   width: 30px;
   height: 30px;
-}
-
-.product__desc {
-  position: relative;
-  border-bottom: 3px solid #008ecc;
-  width: fit-content;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.25;
-  padding-bottom: 14px;
-  color: #666;
-}
-.product__desc strong {
-  font-weight: 700;
-  color: #008ecc;
-  line-height: 30px;
 }
 
 .slider {
