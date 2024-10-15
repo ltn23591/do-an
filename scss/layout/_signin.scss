@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container__parent {
+    background-color: #b4d9de;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.logo-login {
+    color: #000;
+    display: block;
+    font-family: Poppins;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.container-login {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 900px;
+    max-width: 100%;
+    min-height: 600px;
+}
+
+.container-login p {
+    font-size: 2rem;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container-login span {
+    font-size: 12px;
+    margin: 30px 0;
+}
+.login__heading {
+    color: #525252;
+    font-family: Hanken Grotesk;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+// .container-login a {
+//     color: #333;
+//     font-size: 13px;
+//     text-decoration: none;
+//     margin: 15px 0 10px;
+// }
+
+.container-login button {
+    background-color: #4db9c7;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container-login button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container-login form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.form__group {
+    // background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+.form__input {
+    padding: 15px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-bottom-left-radius: 12px;
+    width: 100%;
+    font-size: 1.8rem;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container-login.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container-login.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.container-login.active .toggle-container {
+    transform: translateX(-100%);
+}
+
+.toggle {
+    background-color: #b4d9de;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #b4d9de);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.login__toggle {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.container-login.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container-login.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container-login.active .toggle-right {
+    transform: translateX(200%);
+}
+
+.form__group {
+    position: relative;
+    .input__text {
+        position: absolute;
+        top: 26px;
+        font-size: 2rem;
+        left: 30px;
+        transition: ease-in-out 0.4s;
+    }
+}
+.form__input {
+    &:focus + .input__text,
+    &:valid + .input__text {
+        transform: translate(182px, -35px);
+        letter-spacing: 3px;
+        background: #000;
+        color: #fff;
+        padding: 6px;
+        font-size: 2.2rem;
+    }
+}

@@ -47,10 +47,12 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- JS -->
+        <script src="./assets/js/form.js"></script>
     </head>
     <body class="">
         <!-- Header -->
-        <header class="header__fixed">
+        <header id="header" class="header__fixed">
             <div class="menu-overlay"></div>
             <div class="menu-drawer">
                 <button class="icon__shop-close" aria-label="Đóng menu">
@@ -63,7 +65,12 @@
                         />
                     </svg>
                 </button>
-                <div class="card-wrapper">
+                <div
+                    class="card-wrapper"
+                    contenteditable="true"
+                    onblur="saveContent()"
+                >
+                    <p>Xin chao</p>
                     <ul class="card__title">
                         <li class="card__title-desc">Tên sản phẩm</li>
                         <li class="card__title-desc">Số lượng</li>
@@ -135,14 +142,16 @@
                         <div class="action__line"></div>
 
                         <!-- Item 2 -->
-                        <div class="action__item">
+                        <div id="Sign-in" class="action__item">
                             <img
                                 src="./assets/icons/sign-in-up.svg"
                                 alt="Đăng nhập/Đăng kí"
                                 class="action__icon"
                                 loading="lazy"
                             />
-                            <a href="#!" class="action__desc"
+                            <a
+                                href="./template/sign-in.html"
+                                class="action__desc"
                                 >Đăng kí/Đăng nhập</a
                             >
                         </div>
@@ -297,11 +306,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <ul class="hero__dots">
-                        <li class="hero__dot"></li>
-                        <li class="hero__dot"></li>
-                    </ul> -->
-                    <!-- Phân trang (Pagination) -->
+
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
@@ -732,7 +737,7 @@
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
-                    <div class="logo">ShopPlus</div>
+                    <div class="logo" style="color: black">ShopPlus</div>
                     <div class="contact-us">
                         <h3>Contact Us</h3>
                         <div class="footer__icon-wrap">
@@ -836,6 +841,7 @@
         </footer>
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/swiper.js"></script>
+        <script src="./assets/js/sign-in.js "></script>
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>

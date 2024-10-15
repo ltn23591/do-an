@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ShopPlus - Mua Sắm Thông Minh</title>
+
+        <!-- Favicon và Các Liên Kết Khác -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/favicon/favicon-48x48.png"
+            sizes="48x48"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./assets/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Font Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/css/main.css" />
+    </head>
+    <body>
+        <div class="container__parent">
+            <div class="container-login" id="container">
+                <div class="form-container sign-up">
+                    <form>
+                        <h1 class="login__heading">Tạo tài khoản mới</h1>
+                        <span
+                            >hoặc sử dụng tài khoản e-mail của bạn để đăng
+                            kí</span
+                        >
+                        <div class="form__group">
+                            <input required class="form__input" type="text" />
+                            <div class="input__text">Name</div>
+                        </div>
+                        <div class="form__group">
+                            <input required class="form__input" type="text" />
+                            <div class="input__text">Email</div>
+                        </div>
+                        <div class="form__group">
+                            <input
+                                required
+                                class="form__input"
+                                type="password"
+                            />
+                            <div class="input__text">Password</div>
+                        </div>
+                        <button>Đăng kí</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in">
+                    <form>
+                        <h1 class="login__heading">Đăng nhập</h1>
+
+                        <span>hoặc sử dụng mật khẩu e-mail của bạn</span>
+                        <div class="form__group">
+                            <input required class="form__input" type="text" />
+                            <div class="input__text">Email</div>
+                        </div>
+                        <div class="form__group">
+                            <input
+                                required
+                                class="form__input"
+                                type="password"
+                            />
+                            <div class="input__text">Password</div>
+                        </div>
+                        <a href="#">Quên mật khẩu?</a>
+                        <button>Đăng nhập</button>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <a href="../index.html" class="logo-login"
+                                >ShopPlus</a
+                            >
+                            <h1 class="login__toggle">
+                                Chào mừng bạn trở lại!
+                            </h1>
+                            <p>
+                                Đăng nhập tài khoản của bạn để tiếp tục mua sắm
+                            </p>
+                            <button class="hidden" id="login">Đăng nhập</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <a href="../index.html" class="logo-login"
+                                >ShopPlus</a
+                            >
+
+                            <h1 class="login__toggle">Chào bạn!</h1>
+                            <p>
+                                Đăng ký thông tin cá nhân của bạn để tiếp tục
+                                trải nghiệm mua sắm
+                            </p>
+                            <button class="hidden" id="register">
+                                Đăng kí
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../assets/js/login.js"></script>
+    </body>
+</html>

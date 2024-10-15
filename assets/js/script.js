@@ -36,8 +36,6 @@ btn.forEach(function (button, index) {
         toast.style.transform = "translateX(0)";
         setTimeout(() => {
             toast.style.transform = "translateX(115%)";
-
-            // transform: translateX(115%);
         }, 1000);
         addCard(nameItem, Img, Price);
     });
@@ -109,8 +107,12 @@ function addCard(nameItem, Img, Price) {
     });
     liInput.addEventListener("change", updateTotal); // Cập nhật khi số lượng thay đổi
     updateTotal();
+    saveContent();
 }
-
+function saveContent() {
+    const content = document.querySelector(".card-wrapper").innerHTML.trim();
+    localStorage.setItem("content", content);
+}
 function updateTotal() {
     var total = 0;
     var Cards = document.querySelectorAll(".card__item");
@@ -127,4 +129,3 @@ function updateTotal() {
     document.querySelector(".total").innerText =
         "Tổng tiền: " + total.toLocaleString() + " VNĐ";
 }
-
