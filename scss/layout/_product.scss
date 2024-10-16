@@ -66,12 +66,12 @@
                     font-size: 1.6rem;
                     font-weight: 700;
                     line-height: 1.12;
-                    color: var(--product-text-color-dark);
+                    color: var(--product-text-color-title);
                 }
 
                 .product__price {
                     font-weight: 500;
-                    color: var(--text-color-light);
+                    color: var(--product-price-color    );
                     margin-top: 10px;
                     padding-bottom: 10px;
                     border-bottom: 1px solid var(--border-color);
@@ -127,7 +127,7 @@
                 }
 
                 .product-cate__title {
-                    color: var(--product-text-color-dark);
+                    color: var(--product-text-color-title);
                     margin-top: 20px;
                 }
             }

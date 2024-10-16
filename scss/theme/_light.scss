@@ -12,6 +12,10 @@
     --toast-border-color: greenyellow;
     --toast-background: #fff;
 
+    // Menu
+    --menu-bg: #fff;
+    --menu-text: #000;
+
     /* Hero Section */
     --hero-bg-color: #212844;
     --hero-text-color: #fff;
@@ -29,20 +33,25 @@
 
     // Product
     --product-bg-color: var(--text-color-light);
-    --product-text-color-dark: var(--text-color-dark);
+    --product-text-color-title: #000;
     --product-text-color-light: var(--text-color-light);
     --product-border-color: var(--border-color);
     --product-sale-bg-color: var(--primary-color);
+    --product-price-color: #000;
     --product-sale-text-color: var(--text-color-light);
     /* Icon */
 
     --icon-filter: brightness(0) saturate(100%) invert(58%) sepia(100%)
         saturate(4952%) hue-rotate(173deg) brightness(93%) contrast(101%);
-
+    --icon-filter-black: brightness(0) saturate(100%) invert(58%) sepia(100%)
+        saturate(4952%) hue-rotate(173deg) brightness(93%) contrast(101%);
     // Footer
     --footer-bg: var(--primary-color);
 }
 
 .icon {
     filter: var(--icon-filter);
+}
+.icon-black {
+    filter: var(--icon-filter-black);
 }

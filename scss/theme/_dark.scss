@@ -12,6 +12,9 @@ body.dark-mode {
     --toast-border-color: #b2ff59; /* Màu viền cho toast */
     --toast-background: #fff; /* Nền toast tối hơn */
 
+    // Menu
+    --menu-bg: #424242;
+    --menu-text: #fff;
     /* Hero Section */
     --hero-bg-color: #0d0d0d; /* Nền hero tối hơn */
     --hero-text-color: #fff; /* Văn bản hero sáng hơn */
@@ -29,18 +32,19 @@ body.dark-mode {
 
     /* Product */
     --product-bg-color: var(--secondary-color); /* Giữ màu phụ tối */
-    --product-text-color-dark: var(--text-color-dark);
+    --product-text-color-title: #fff;
     --product-text-color-light: var(--text-color-light);
     --product-border-color: var(--border-color); /* Giữ màu viền tối */
     --product-sale-bg-color: var(--primary-color); /* Màu nền sale */
     --product-sale-text-color: var(--text-color-light); /* Màu văn bản sale */
+    --product-price-color: #fff;
 
     /* Icon */
 
     --icon-filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
         saturate(4419%) hue-rotate(40deg) brightness(129%) contrast(91%);
-    --icon-filter-black: brightness(0) saturate(100%) invert(0%) sepia(2%)
-        saturate(0%) hue-rotate(226deg) brightness(100%) contrast(100%);
+    --icon-filter-black: brightness(0) saturate(100%) invert(0%) sepia(100%)
+        saturate(7442%) hue-rotate(147deg) brightness(87%) contrast(113%);
     // Footer
     --footer-bg: #373737;
 }
@@ -48,6 +52,6 @@ body.dark-mode {
 .icon {
     filter: var(--icon-filter);
 }
-.icon-black{
+.icon-black {
     filter: var(--icon-filter-black);
 }

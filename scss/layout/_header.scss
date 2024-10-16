@@ -108,14 +108,16 @@
     opacity: 0;
     position: fixed;
     inset: 0 0 0 40%;
-    background-color: var(--hover-color);
+    background-color: var(--menu-bg);
     z-index: 2;
     transform: translateX(100%);
     transition: all 0.5s;
     overflow: auto; /* Cho phép cuộn dọc nếu nội dung quá dài */
     max-height: 100vh;
 }
-
+.card__title-desc {
+    color: var(--menu-text);
+}
 .icon__shop-close {
     width: 50px;
     position: absolute;
@@ -155,12 +157,14 @@
         margin-top: 20px;
     }
 }
-
+.card__price {
+    color: var(--menu-text);
+}
 .total {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: var(--hover-color);
+    color: var(--menu-text);
     background: var(--primary-color);
     margin-right: -20px;
     margin-top: 30px;
