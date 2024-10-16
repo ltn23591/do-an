@@ -50,7 +50,7 @@
         <!-- JS -->
         <script src="./assets/js/form.js"></script>
     </head>
-    <body class="">
+    <body>
         <!-- Header -->
         <header id="header" class="header__fixed">
             <div class="menu-overlay"></div>
@@ -65,12 +65,7 @@
                         />
                     </svg>
                 </button>
-                <div
-                    class="card-wrapper"
-                    contenteditable="true"
-                    onblur="saveContent()"
-                >
-                    <p>Xin chao</p>
+                <div class="card-wrapper">
                     <ul class="card__title">
                         <li class="card__title-desc">Tên sản phẩm</li>
                         <li class="card__title-desc">Số lượng</li>
@@ -102,7 +97,7 @@
                         <img
                             src="./assets/icons/search.svg"
                             alt="Icon tìm kiếm"
-                            class="search__icon"
+                            class="icon-black search__icon"
                             loading="lazy"
                         />
                         <input
@@ -120,12 +115,24 @@
                             <img
                                 src="./assets/icons/search-list.svg"
                                 alt="Biểu tượng gửi"
-                                class="search__list"
+                                class="icon-black search__list"
                                 loading="lazy"
                             />
                         </button>
                     </form>
-
+                    <!-- Dark Mode -->
+                    <div class="control">
+                        <img
+                            src="./assets/icons/darkmode.svg"
+                            alt=""
+                            class="icon control__dark"
+                        />
+                        <img
+                            src="./assets/icons/lightmode.svg"
+                            alt=""
+                            class="icon control__light"
+                        />
+                    </div>
                     <!-- Action -->
                     <div class="action__list">
                         <!-- Item 1 -->
@@ -133,7 +140,7 @@
                             <img
                                 src="./assets/icons/shopping.svg"
                                 alt="Giỏ hàng"
-                                class="action__icon"
+                                class="icon action__icon"
                                 loading="lazy"
                             />
                             <a href="#!" class="action__desc">Giỏ hàng</a>
@@ -146,7 +153,7 @@
                             <img
                                 src="./assets/icons/sign-in-up.svg"
                                 alt="Đăng nhập/Đăng kí"
-                                class="action__icon"
+                                class="icon action__icon"
                                 loading="lazy"
                             />
                             <a href="./template/login.html" class="action__desc"
@@ -646,11 +653,11 @@
                             </div>
                         </div>
                         <!-- Dots -->
-                        <ul class="slider__dots" aria-label="Chỉ số trang">
+                        <!-- <ul class="slider__dots" aria-label="Chỉ số trang">
                             <li class="slider__dot slider__dot-active"></li>
                             <li class="slider__dot"></li>
                             <li class="slider__dot"></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </section>
@@ -735,7 +742,7 @@
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
-                    <div class="logo" style="color: black">ShopPlus</div>
+                    <div class="logo">ShopPlus</div>
                     <div class="contact-us">
                         <h3>Contact Us</h3>
                         <div class="footer__icon-wrap">
@@ -840,6 +847,7 @@
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/swiper.js"></script>
         <script src="./assets/js/sign-in.js "></script>
+        <script src="./assets/js/theme.js "></script>
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>

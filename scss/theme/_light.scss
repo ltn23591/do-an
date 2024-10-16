@@ -1,0 +1,48 @@
+:root {
+    /* Tổng quan */
+    --background: #b4d9de;
+    --primary-color: #008ecc;
+    --secondary-color: #f5f5f5;
+    --text-color-dark: #222;
+    --text-color-light: #fff;
+    --text-color-grey: #393939;
+    --border-color: #ccc;
+    --overlay-background: rgba(0, 0, 0, 0.6);
+    --card-remove-color: red;
+    --toast-border-color: greenyellow;
+    --toast-background: #fff;
+
+    /* Hero Section */
+    --hero-bg-color: #212844;
+    --hero-text-color: #fff;
+
+    /* Slider Section */
+    --slider-bg-dark: #313131;
+    --slider-bg-medium: #414141;
+    --slider-bg-light: #494949;
+    --slider-bg-item2: #fff3cc;
+    --slider-bg-item2-name: #f6de8d;
+    --slider-bg-item3: #ffecdf;
+    --slider-bg-item3-name: #ffd1b0;
+
+    //
+
+    // Product
+    --product-bg-color: var(--text-color-light);
+    --product-text-color-dark: var(--text-color-dark);
+    --product-text-color-light: var(--text-color-light);
+    --product-border-color: var(--border-color);
+    --product-sale-bg-color: var(--primary-color);
+    --product-sale-text-color: var(--text-color-light);
+    /* Icon */
+
+    --icon-filter: brightness(0) saturate(100%) invert(58%) sepia(100%)
+        saturate(4952%) hue-rotate(173deg) brightness(93%) contrast(101%);
+
+    // Footer
+    --footer-bg: var(--primary-color);
+}
+
+.icon {
+    filter: var(--icon-filter);
+}

@@ -2,11 +2,5 @@
 @use "./base/base";
 @use "./base/common";
 @use "./base/grid";
-@use "./layout/header";
-@use "./layout/hero";
-@use "./layout/product";
-@use "./layout/slider";
-@use "./layout/daily";
-@use "./layout/footer";
-@use "./layout/signin";
-@use "./layout/login";
+@use "./theme";
+@use "./layout";

@@ -1,7 +1,8 @@
 footer {
-    background-color: #0082c6;
+    background: var(--footer-bg);
     color: white;
     padding: 40px 0;
+    transition: ease all 0.3s;
 }
 
 .footer-container {
@@ -32,7 +33,9 @@ footer {
     margin-bottom: 10px;
     font-size: 1rem;
 }
-
+.contact-us {
+    margin-top: 30px;
+}
 .contact-us p,
 .download-app p {
     font-size: 1.25rem;
@@ -53,9 +56,9 @@ footer {
 }
 
 .logo {
+    color: var(--text-color-dark);
     font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .footer-column hr {

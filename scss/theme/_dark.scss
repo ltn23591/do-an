@@ -1,0 +1,53 @@
+body.dark-mode {
+    /* Tổng quan */
+    --background: #1a1a1a; /* Thay đổi nền thành màu tối */
+    --primary-color: #1e88e5; /* Màu chính sáng hơn để nổi bật */
+    --secondary-color: #424242; /* Màu phụ tối hơn */
+    --text-color-dark: #fff; /* Văn bản tối thành màu sáng */
+    --text-color-light: #fff; /* Màu văn bản sáng hơn */
+    --text-color-grey: #fff; /* Màu xám cho văn bản */
+    --border-color: #fff; /* Màu viền tối hơn */
+    --overlay-background: rgba(0, 0, 0, 0.8); /* Tối hơn một chút */
+    --card-remove-color: #ff4d4d; /* Màu đỏ cho nút xóa */
+    --toast-border-color: #b2ff59; /* Màu viền cho toast */
+    --toast-background: #fff; /* Nền toast tối hơn */
+
+    /* Hero Section */
+    --hero-bg-color: #0d0d0d; /* Nền hero tối hơn */
+    --hero-text-color: #fff; /* Văn bản hero sáng hơn */
+
+    /* Slider Section */
+    --slider-bg-dark: #1c1c1c; /* Nền tối hơn */
+    --slider-bg-medium: #272727; /* Nền trung bình tối hơn */
+    --slider-bg-light: #3c3c3c; /* Nền sáng tối hơn */
+    --slider-bg-item2: #fff3cc; /* Giữ màu nền item 2 */
+    --slider-bg-item2-name: #f6de8d; /* Màu tên item 2 */
+    --slider-bg-item3: #ffecdf; /* Màu nền item 3 */
+    --slider-bg-item3-name: #ffd1b0; /* Màu tên item 3 */
+
+    --slider-text-black: #000;
+
+    /* Product */
+    --product-bg-color: var(--secondary-color); /* Giữ màu phụ tối */
+    --product-text-color-dark: var(--text-color-dark);
+    --product-text-color-light: var(--text-color-light);
+    --product-border-color: var(--border-color); /* Giữ màu viền tối */
+    --product-sale-bg-color: var(--primary-color); /* Màu nền sale */
+    --product-sale-text-color: var(--text-color-light); /* Màu văn bản sale */
+
+    /* Icon */
+
+    --icon-filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
+        saturate(4419%) hue-rotate(40deg) brightness(129%) contrast(91%);
+    --icon-filter-black: brightness(0) saturate(100%) invert(0%) sepia(2%)
+        saturate(0%) hue-rotate(226deg) brightness(100%) contrast(100%);
+    // Footer
+    --footer-bg: #373737;
+}
+
+.icon {
+    filter: var(--icon-filter);
+}
+.icon-black{
+    filter: var(--icon-filter-black);
+}

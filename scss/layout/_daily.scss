@@ -38,12 +38,13 @@
                 font-size: 1.6rem;
                 font-weight: 600;
                 line-height: 1.25;
-                color: #666666;
+                color: var(--text-color-grey);
             }
             .daily__sale {
                 font-size: 2rem;
                 color: #222;
                 font-weight: 700;
+                color: var(--text-color-grey);
                 line-height: 1;
             }
         }
