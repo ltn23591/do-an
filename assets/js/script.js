@@ -1,45 +1,40 @@
-const cartDesc = document.getElementById("active"); // Chọn Giỏ hàng
-const overlay = document.querySelector(".menu-overlay"); // Overlay
-const menushop = document.querySelector(".menu-drawer"); // Menu drawer
-const closeIcon = document.querySelector(".icon__shop-close"); // Icon đóng
+const cartDesc = document.getElementById("active");
+const overlay = document.querySelector(".menu-overlay");
+const menushop = document.querySelector(".menu-drawer");
+const closeIcon = document.querySelector(".icon__shop-close");
 
-// Khi click vào "Giỏ hàng" (cartDesc), mở menu
 cartDesc.addEventListener("click", (event) => {
-    document.body.classList.add("lock-scroll"); // Khóa cuộn cho body
-    overlay.style.display = "block"; // Hiển thị overlay
-    menushop.style.transform = "translateX(0)"; // Hiển thị menu
-    menushop.style.opacity = "1"; // Hiển thị menu
+    document.body.classList.add("lock-scroll");
+    overlay.style.display = "block";
+    menushop.style.transform = "translateX(0)";
+    menushop.style.opacity = "1";
 });
 
-// Khi click vào icon đóng, ẩn menu
 closeIcon.addEventListener("click", () => {
-    document.body.classList.remove("lock-scroll"); // Mở khóa cuộn cho body
-    overlay.style.display = "none"; // Ẩn overlay
-    menushop.style.transform = "translateX(100%)"; // Ẩn menu
+    document.body.classList.remove("lock-scroll");
+    overlay.style.display = "none";
+    menushop.style.transform = "translateX(100%)";
     menushop.style.opacity = "0";
 });
 
-// Khi click vào overlay, ẩn menu
 overlay.addEventListener("click", () => {
-    document.body.classList.remove("lock-scroll"); // Mở khóa cuộn cho body
-    overlay.style.display = "none"; // Ẩn overlay
-    menushop.style.transform = "translateX(100%)"; // Ẩn menu
+    document.body.classList.remove("lock-scroll");
+    overlay.style.display = "none";
+    menushop.style.transform = "translateX(100%)";
 });
 
-// Sự kiện click cho các nút sản phẩm
-const btn = document.querySelectorAll("button");
+const btn = document.querySelectorAll(".product__buy");
 btn.forEach(function (button) {
     button.addEventListener("click", function (e) {
         var btnItem = e.target;
         var productItem = btnItem.parentElement.parentElement;
         var imgElement = productItem.querySelector(".product__img");
 
-        // Kiểm tra xem phần tử img có tồn tại không
         if (imgElement) {
-            var Img = imgElement.src; // Lấy thuộc tính src của img
+            var Img = imgElement.src;
         } else {
             console.error("Không tìm thấy hình ảnh cho sản phẩm.");
-            return; // Ngưng thực thi hàm nếu không tìm thấy hình ảnh
+            return;
         }
 
         var Price = productItem.querySelector(".product__price").innerText;
@@ -54,7 +49,6 @@ btn.forEach(function (button) {
 });
 
 function addCard(nameItem, Img, Price) {
-    // Chọn thẻ cha lớn nhất
     var productList = document.createElement("ul");
     productList.classList.add("card__item");
     productList.style.borderBottom = "2px solid #ccc";
@@ -62,19 +56,16 @@ function addCard(nameItem, Img, Price) {
     const wrapper = document.querySelector(".card-wrapper");
     wrapper.appendChild(productList);
 
-    // Tạo các thẻ li
     var li1 = document.createElement("li");
     var li2 = document.createElement("li");
     var li3 = document.createElement("li");
     var li4 = document.createElement("li");
 
-    // Img
     var liImg = document.createElement("img");
     liImg.classList.add("card__item-img");
     liImg.src = Img;
     li1.appendChild(liImg);
 
-    // Lấy tên của Item
     var liName = document.createElement("h3");
     liName.classList.add("product__title");
     liName.innerText = nameItem;
@@ -83,7 +74,6 @@ function addCard(nameItem, Img, Price) {
     li1.classList.add("card__item-media");
     li1.appendChild(liName);
 
-    // Input
     var liInput = document.createElement("input");
     liInput.classList.add("card__input");
     liInput.value = "1";
@@ -92,32 +82,28 @@ function addCard(nameItem, Img, Price) {
     li2.classList.add("card__item-media");
     li2.appendChild(liInput);
 
-    // Giá
     var liPrice = document.createElement("span");
     liPrice.classList.add("card__price");
     liPrice.innerText = Price;
     li3.classList.add("card__item-media");
     li3.appendChild(liPrice);
 
-    // Nút xóa
     var liRemove = document.createElement("span");
     liRemove.classList.add("card__remove");
     liRemove.innerText = "Xóa";
     li4.classList.add("card__item-media");
     li4.appendChild(liRemove);
 
-    // Thêm các li vào productList
     productList.appendChild(li1);
     productList.appendChild(li2);
     productList.appendChild(li3);
     productList.appendChild(li4);
 
-    // Thêm sự kiện xóa
     li4.addEventListener("click", () => {
         productList.remove();
         updateTotal();
     });
-    liInput.addEventListener("change", updateTotal); // Cập nhật khi số lượng thay đổi
+    liInput.addEventListener("change", updateTotal);
     updateTotal();
     saveContent();
 }
@@ -141,23 +127,39 @@ function updateTotal() {
         total += price * soluongInput;
     });
 
-    // Cập nhật tổng tiền vào giao diện
     document.querySelector(".total").innerText =
-        "Tổng tiền: " + total.toLocaleString() + " VNĐ";
-
-    // Cập nhật tổng giá vào trường hidden trong form
-    document.getElementById("totalPrice").value = total; // Cập nhật tổng tiền
+        "Tổng: " + total.toLocaleString() + " VNĐ";
+    document.getElementById("totalPrice").value = total;
 }
 
-// Gán sự kiện click cho nút "Đặt hàng ngay"
-// Gán sự kiện click cho nút "Đặt hàng ngay"
+const formUser = document.getElementById("userForm");
+const overlayUser = document.querySelector(".menu-overlay-user");
+const iconUser = document.querySelector(".icon__user");
+// Khi người dùng nhấn "Đặt hàng ngay"
+document.getElementById("exportButton").addEventListener("click", function () {
+    // Hiển thị form người dùng
+    formUser.style.opacity = "1";
+    formUser.style.zIndex = "100";
+    formUser.style.translate = "50% 20%";
+    formUser.style.visibility = "visible";
+    overlayUser.style.display = "block";
+});
+// Đóng form khi nhấn icon "X" hoặc nhấn overlay
+iconUser.addEventListener("click", () => {
+    overlayUser.style.display = "none";
+    formUser.style.opacity = "0";
+    formUser.style.visibility = "hidden";
+});
+overlayUser.addEventListener("click", () => {
+    overlayUser.style.display = "none";
+    formUser.style.opacity = "0";
+    formUser.style.visibility = "hidden";
+});
+// Xử lý khi người dùng xác nhận đơn hàng
 document
-    .getElementById("exportButton")
-    .addEventListener("click", function (event) {
-        // Ngăn chặn hành động gửi mặc định
-        event.preventDefault();
-
-        // Thu thập dữ liệu từ giỏ hàng
+    .getElementById("confirmOrderButton")
+    .addEventListener("click", function () {
+        // Lấy thông tin từ giỏ hàng
         let items = document.querySelectorAll(".card__item");
         let data = [];
 
@@ -165,79 +167,44 @@ document
             let nameItem = item.querySelector(".product__title").innerText;
             let quantity = item.querySelector("input").value;
             let price = item.querySelector(".card__price").innerText;
+
+            let priceValue = parseFloat(
+                price.replace("VNĐ", "").replace(/\./g, "")
+            );
+            let totalPriceForItem = priceValue * quantity;
+
             data.push({
                 name: nameItem,
                 quantity: quantity,
-                price: price,
+                price: totalPriceForItem,
             });
         });
 
-        // Chuyển đổi dữ liệu thành JSON và cập nhật vào trường ẩn
         document.getElementById("dataField").value = JSON.stringify(data);
 
-        // Cập nhật tổng giá vào trường hidden trong form
-        const totalPrice = document.getElementById("totalPrice").value;
-        document.getElementById("totalPrice").value = totalPrice; // Cập nhật tổng tiền
+        // Thu thập thông tin người dùng
+        const fullName = document.getElementById("fullName").value;
+        const phone = document.getElementById("phone").value;
+        const address = document.getElementById("address").value;
 
-        // Gửi biểu mẫu
-        document.getElementById("orderForm").submit();
+        // Gửi thêm thông tin người dùng vào biểu mẫu
+        const orderForm = document.getElementById("orderForm");
+        orderForm.appendChild(createHiddenInput("fullName", fullName));
+        orderForm.appendChild(createHiddenInput("phone", phone));
+        orderForm.appendChild(createHiddenInput("address", address));
+
+        // Gửi biểu mẫu đến Google Sheets
+        const actionUrl =
+            "https://script.google.com/macros/s/AKfycbyCnVmPw36P0oY7GLQely1vrnaYh1K91LPXjrOWk8SaMafz-MwniZGoz1lbti8-wh7-/exec";
+        orderForm.action = actionUrl;
+        orderForm.method = "POST";
+        orderForm.submit();
     });
 
-// Gán sự kiện click cho nút "Đặt hàng ngay"
-document
-    .getElementById("exportButton")
-    .addEventListener("click", function (event) {
-        // Ngăn chặn hành động gửi mặc định
-        event.preventDefault();
-
-        // Thu thập dữ liệu từ giỏ hàng
-        let items = document.querySelectorAll(".card__item");
-        let data = [];
-
-        items.forEach((item) => {
-            let nameItem = item.querySelector(".product__title").innerText;
-            let quantity = item.querySelector("input").value;
-            let price = item.querySelector(".card__price").innerText;
-            data.push({
-                name: nameItem,
-                quantity: quantity,
-                price: price,
-            });
-        });
-
-        // Chuyển đổi dữ liệu thành JSON và cập nhật vào trường ẩn
-        document.getElementById("dataField").value = JSON.stringify(data);
-
-        // Cập nhật tổng giá vào trường hidden trong form
-        const totalPrice = document.getElementById("totalPrice").value;
-        document.getElementById("totalPrice").value = totalPrice; // Cập nhật tổng tiền
-
-        // Kiểm tra xem giỏ hàng có sản phẩm trước khi gửi
-        if (data.length > 0) {
-            // Gửi yêu cầu đến Google Apps Script
-            fetch(
-                "https://script.google.com/macros/s/AKfycbwlkX6k27dDY4RtJhtjWfxbXzDPQ_tUE_UWul2MeRaHsbh6-ZDUJjAEvn7BDS0EUSZW-Q/exec",
-                {
-                    method: "POST",
-                    body: new URLSearchParams({
-                        data: JSON.stringify(data),
-                        totalPrice: totalPrice,
-                    }),
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                }
-            )
-                .then((response) => response.text())
-                .then((result) => {
-                    console.log(result); // Hiển thị phản hồi từ server
-                    alert("Dữ liệu đã được gửi thành công!");
-                })
-                .catch((error) => {
-                    console.error("Có lỗi xảy ra:", error);
-                    alert("Gửi dữ liệu không thành công.");
-                });
-        } else {
-            alert("Giỏ hàng của bạn đang trống!");
-        }
-    });
+function createHiddenInput(name, value) {
+    let input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    return input;
+}

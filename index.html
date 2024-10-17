@@ -54,6 +54,7 @@
         <!-- Header -->
         <header id="header" class="header__fixed">
             <div class="menu-overlay"></div>
+            <div class="menu-overlay-user"></div>
             <div class="menu-drawer">
                 <button class="icon__shop-close" aria-label="Đóng menu">
                     <svg
@@ -65,11 +66,8 @@
                         />
                     </svg>
                 </button>
-                <form
-                    action="https://script.google.com/macros/s/AKfycbwlkX6k27dDY4RtJhtjWfxbXzDPQ_tUE_UWul2MeRaHsbh6-ZDUJjAEvn7BDS0EUSZW-Q/exec"
-                    id="orderForm"
-                    method="POST"
-                >
+                <!-- Form giỏ hàng -->
+                <form id="orderForm">
                     <div class="card-wrapper">
                         <ul class="card__title">
                             <li class="card__title-desc">Tên sản phẩm</li>
@@ -94,6 +92,51 @@
                         value="0"
                     />
                 </form>
+            </div>
+
+            <!-- Form nhập thông tin người dùng -->
+            <div class="form__user" id="userForm">
+                <img
+                    src="./assets/icons/icon-user.svg"
+                    alt=""
+                    class="icon__user"
+                />
+                <div class="form__group">
+                    <label for="fullName" class="form__label">Họ và tên</label>
+                    <input
+                        class="form__input-user"
+                        type="text"
+                        name="fullName"
+                        id="fullName"
+                        placeholder="Họ và tên"
+                        required
+                    />
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="phone">Số điện thoại</label>
+                    <input
+                        class="form__input-user"
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Số điện thoại"
+                        required
+                    />
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="address">Địa chỉ</label>
+                    <input
+                        class="form__input-user"
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="Địa chỉ"
+                        required
+                    />
+                </div>
+                <button type="button" class="menu-btn" id="confirmOrderButton">
+                    Xác nhận đơn hàng
+                </button>
             </div>
             <div class="container">
                 <div class="top-bar">
