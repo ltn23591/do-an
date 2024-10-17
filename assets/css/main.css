@@ -407,6 +407,7 @@ body.dark-mode {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
   justify-content: space-between;
   align-items: center;
   padding: 40px;
@@ -415,6 +416,7 @@ body.dark-mode {
 .card__item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
@@ -444,7 +446,6 @@ body.dark-mode {
   color: var(--menu-text);
   background: var(--primary-color);
   margin-right: -20px;
-  margin-top: 30px;
   font-size: 2.4rem;
   font-weight: 600;
   height: 100px;
@@ -479,6 +480,34 @@ body.dark-mode {
 }
 .control .control__dark {
   display: block;
+}
+
+.total-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--menu-text);
+  background: var(--primary-color);
+  margin-right: -20px;
+  margin-top: 30px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  height: 110px;
+}
+.total-wrap .buy {
+  padding: 20px;
+  color: #fff;
+  background: rgb(232, 117, 55);
+  font-size: 2.4rem;
+  border-radius: 12px;
+  margin-right: 100px;
+  font-weight: 600;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+.total-wrap .buy:hover {
+  transform: scale(1.1);
+  letter-spacing: 1px;
 }
 
 footer {
@@ -622,34 +651,82 @@ hr {
   line-height: 1;
 }
 
+.toast .toast-body, .toast, .product__bottom .product-cate__list .product-cate__item .product-cate__item-wrap, .product__bottom .product-cate__list .product-cate__item, .product__bottom .product-cate__list, .product__buy, .product__content, .product__thumb, .product__item {
+  display: flex;
+  align-items: center;
+}
+
 .product {
   margin-top: 70px;
 }
-.product .product__list {
+.product__list {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   column-gap: 16px;
 }
-.product .product__list .product__item {
+.product__item {
   padding: 15px 12px;
   width: 227px;
-  height: 300px;
-  display: flex;
-  align-items: center;
+  height: auto;
   flex-direction: column;
   border-radius: 16px;
   background: var(--product-bg-color);
   position: relative;
   transition: ease 0.5s all;
 }
-.product .product__list .product__item:hover {
+.product__item:hover {
   outline: 1px solid var(--primary-color);
   border-radius: 16px;
   transform: translateY(-20px);
 }
-.product .product__list .product__item .product__sale {
+.product__thumb {
+  width: 126px;
+  height: 180px;
+  justify-content: center;
+}
+.product__thumb__img {
+  object-fit: contain;
+  width: 126px;
+  height: 180px;
+}
+.product__content {
+  margin-top: 12px;
+  flex-direction: column;
+}
+.product__title {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--product-text-color-title);
+}
+.product__price {
+  font-weight: 500;
+  color: var(--product-price-color);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.product__buy {
+  padding: 10px;
+  justify-content: center;
+  width: 150px;
+  height: 30px;
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+.product__buy:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.product__sale {
   position: absolute;
   top: 0;
   z-index: 1;
@@ -666,79 +743,26 @@ hr {
   font-weight: 400;
   line-height: 1.14;
 }
-.product .product__list .product__item .product__thumb {
-  width: 126px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.product .product__list .product__item .product__thumb .product__img {
-  object-fit: contain;
-}
-.product .product__list .product__item .product__content {
-  background: inherit;
-  margin-top: 12px;
-}
-.product .product__list .product__item .product__content .product__title {
-  font-family: "Poppins", sans-serif;
-  white-space: nowrap;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.12;
-  color: var(--product-text-color-title);
-}
-.product .product__list .product__item .product__content .product__price {
-  font-weight: 500;
-  color: var(--product-price-color);
-  margin-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
-}
-.product .product__list .product__item .product__content .product__buy {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 30px;
-  background: var(--primary-color);
-  color: var(--text-color-light);
-  border-radius: 13px;
-  border: none;
-  outline: none;
-  margin-left: 15px;
-  margin-top: 10px;
-}
-.product .product__list .product__item .product__content .product__buy:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-.product .product__bottom {
+
+.product__bottom {
   margin-top: 90px;
 }
-.product .product__bottom .product-cate__list {
+.product__bottom .product-cate__list {
   margin-top: 40px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   column-gap: 30px;
 }
-.product .product__bottom .product-cate__list .product-cate__item {
-  display: flex;
-  align-items: center;
+.product__bottom .product-cate__list .product-cate__item {
   flex-direction: column;
 }
-.product .product__bottom .product-cate__list .product-cate__item .product-cate__item-wrap {
+.product__bottom .product-cate__list .product-cate__item .product-cate__item-wrap {
   background-color: var(--product-bg-color);
   width: 145px;
   height: 145px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
-.product .product__bottom .product-cate__list .product-cate__item .product-cate__title {
+.product__bottom .product-cate__list .product-cate__item .product-cate__title {
   color: var(--product-text-color-title);
   margin-top: 20px;
 }
@@ -751,8 +775,6 @@ hr {
   top: 102px;
   right: 15px;
   transform: translateX(115%);
-  display: flex;
-  align-items: center;
   justify-content: center;
   border-bottom: 5px solid var(--toast-border-color);
   color: var(--toast-text-color);
@@ -762,8 +784,6 @@ hr {
 }
 .toast .toast-body {
   column-gap: 10px;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 .toast .icon-msg {
@@ -1206,6 +1226,10 @@ hr {
   color: #fff;
   padding: 6px;
   font-size: 2.2rem;
+}
+.form__input:focus, .form__input:valid {
+  border-radius: 12px;
+  border: 2px solid #000;
 }
 
 /*# sourceMappingURL=main.css.map */

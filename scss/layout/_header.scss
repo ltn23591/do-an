@@ -132,6 +132,7 @@
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
@@ -140,6 +141,7 @@
 .card__item {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
@@ -167,7 +169,6 @@
     color: var(--menu-text);
     background: var(--primary-color);
     margin-right: -20px;
-    margin-top: 30px;
     font-size: 2.4rem;
     font-weight: 600;
     height: 100px;
@@ -202,5 +203,33 @@
     }
     .control__dark {
         display: block;
+    }
+}
+
+.total-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--menu-text);
+    background: var(--primary-color);
+    margin-right: -20px;
+    margin-top: 30px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    height: 110px;
+    .buy {
+        padding: 20px;
+        color: #fff;
+        background: rgb(232, 117, 55);
+        font-size: 2.4rem;
+        border-radius: 12px;
+        margin-right: 100px;
+        font-weight: 600;
+        transition: all ease 0.5s;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            letter-spacing: 1px;
+        }
     }
 }

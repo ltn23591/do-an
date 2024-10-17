@@ -65,15 +65,35 @@
                         />
                     </svg>
                 </button>
-                <div class="card-wrapper">
-                    <ul class="card__title">
-                        <li class="card__title-desc">Tên sản phẩm</li>
-                        <li class="card__title-desc">Số lượng</li>
-                        <li class="card__title-desc">Giá bán</li>
-                        <li class="card__title-desc">Thao tác</li>
-                    </ul>
-                </div>
-                <span class="total">Tổng: 0 VNĐ</span>
+                <form
+                    action="https://script.google.com/macros/s/AKfycbwlkX6k27dDY4RtJhtjWfxbXzDPQ_tUE_UWul2MeRaHsbh6-ZDUJjAEvn7BDS0EUSZW-Q/exec"
+                    id="orderForm"
+                    method="POST"
+                >
+                    <div class="card-wrapper">
+                        <ul class="card__title">
+                            <li class="card__title-desc">Tên sản phẩm</li>
+                            <li class="card__title-desc">Số lượng</li>
+                            <li class="card__title-desc">Giá bán</li>
+                            <li class="card__title-desc">Thao tác</li>
+                        </ul>
+                        <input type="hidden" id="dataField" name="data" />
+                    </div>
+
+                    <div class="total-wrap">
+                        <span class="total">Tổng: 0 VNĐ</span>
+                        <button type="button" class="buy" id="exportButton">
+                            Đặt hàng ngay
+                        </button>
+                    </div>
+
+                    <input
+                        type="hidden"
+                        id="totalPrice"
+                        name="totalPrice"
+                        value="0"
+                    />
+                </form>
             </div>
             <div class="container">
                 <div class="top-bar">
@@ -564,6 +584,252 @@
                     </div>
                 </div>
             </section>
+            <section class="product">
+                <div class="container">
+                    <div class="product__inner">
+                        <div class="product__top">
+                            <h2 class="section-desc">
+                                Nhận Ưu Đãi Tốt Nhất Từ
+                                <strong>Đồng Hồ Thông Minh</strong>
+                            </h2>
+                            <ul class="product__list">
+                                <!-- Item 1 -->
+                                <li class="product__item">
+                                    <div class="product__sale">50% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/swatch-01.png"
+                                            alt="Galaxy S22 Ultra"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div class="product__content">
+                                        <h3 class="product__title">
+                                            Galaxy Watch7 (Bluetooth, 40mm)
+                                        </h3>
+                                        <div class="product__price">
+                                            7.490.000 VNĐ
+                                        </div>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Galaxy S22 Ultra vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Item 2 -->
+                                <li class="product__item">
+                                    <div class="product__sale">30% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/swatch-02.png"
+                                            alt="iPhone 14 Pro"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div class="product__content">
+                                        <h3 class="product__title">
+                                            Galaxy Watch7 (Bluetooth, 44mm)
+                                        </h3>
+                                        <div class="product__price">
+                                            7.990.000 VNĐ
+                                        </div>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm iPhone 14 Pro vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Item 3 -->
+                                <li class="product__item">
+                                    <div class="product__sale">40% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/swatch-03.png"
+                                            alt="Xiaomi Mi 11"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div class="product__content">
+                                        <h3 class="product__title">
+                                            Galaxy Watch Ultra (LTE, 47mm)
+                                        </h3>
+                                        <div class="product__price">
+                                            16.990.000 VNĐ
+                                        </div>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Xiaomi Mi 11 vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Item 4 -->
+                                <li class="product__item">
+                                    <div class="product__sale">20% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/swatch-04.png"
+                                            alt="Samsung Galaxy Watch"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div class="product__content">
+                                        <h3 class="product__title">
+                                            Galaxy Watch7 (LTE 40mm)
+                                        </h3>
+                                        <div class="product__price">
+                                            8.490.000 VNĐ
+                                        </div>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Samsung Galaxy Watch vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Item 5 -->
+                                <li class="product__item">
+                                    <div class="product__sale">10% OFF</div>
+                                    <div class="product__thumb">
+                                        <img
+                                            src="./assets/img/swatch-05.png"
+                                            alt="Sony WH-1000XM4"
+                                            class="product__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div class="product__content">
+                                        <h3 class="product__title">
+                                            Galaxy Watch7 (LTE 44mm)
+                                        </h3>
+                                        <div class="product__price">
+                                            8.990.000 VNĐ
+                                        </div>
+                                        <button
+                                            class="product__buy"
+                                            aria-label="Thêm Sony WH-1000XM4 vào giỏ hàng"
+                                        >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- Thêm các sản phẩm khác tại đây -->
+                            </ul>
+                        </div>
+                        <div class="toast" role="alert" aria-live="assertive">
+                            <div class="toast-body">
+                                <svg
+                                    class="icon-black icon-msg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"
+                                >
+                                    <path
+                                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                                    />
+                                </svg>
+                                <span class="msg">Thêm vào thành công</span>
+                            </div>
+                        </div>
+                        <div class="product__bottom">
+                            <div class="section-desc">
+                                Mua Sắm Từ
+                                <strong>Các Danh Mục Hàng Đầu</strong>
+                            </div>
+                            <ul class="product-cate__list">
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-12.svg"
+                                            alt="Điện thoại"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">
+                                        Điện thoại
+                                    </p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-06.svg"
+                                            alt="Mỹ phẩm"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Mỹ phẩm</p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-07.svg"
+                                            alt="Điện tử"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Điện tử</p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-08.svg"
+                                            alt="Nội thất"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Nội thất</p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-09.svg"
+                                            alt="Đồng hồ"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Đồng hồ</p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-10.svg"
+                                            alt="Trang trí"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Trang trí</p>
+                                </li>
+                                <li class="product-cate__item">
+                                    <div class="product-cate__item-wrap">
+                                        <img
+                                            src="./assets/img/product-11.svg"
+                                            alt="Trang sức"
+                                            class="product-cate__img"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <p class="product-cate__title">Trang sức</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="slider">
                 <div class="container">
@@ -846,9 +1112,9 @@
         </footer>
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/swiper.js"></script>
-        <script src="./assets/js/sign-in.js "></script>
         <script src="./assets/js/theme.js "></script>
         <!-- Swiper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
 </html>
