@@ -156,50 +156,51 @@ overlayUser.addEventListener("click", () => {
     formUser.style.visibility = "hidden";
 });
 // Xử lý khi người dùng xác nhận đơn hàng
-document
-    .getElementById("confirmOrderButton")
-    .addEventListener("click", function () {
-        // Lấy thông tin từ giỏ hàng
-        let items = document.querySelectorAll(".card__item");
-        let data = [];
+const buyItem = document.getElementById("confirmOrderButton");
+buyItem.addEventListener("click", function (e) {
+    // Lấy thông tin từ giỏ hàng
+    e.preventDefault();
+    let items = document.querySelectorAll(".card__item");
+    let data = [];
 
-        items.forEach((item) => {
-            let nameItem = item.querySelector(".product__title").innerText;
-            let quantity = item.querySelector("input").value;
-            let price = item.querySelector(".card__price").innerText;
+    items.forEach((item) => {
+        let nameItem = item.querySelector(".product__title").innerText;
+        let quantity = item.querySelector("input").value;
+        let price = item.querySelector(".card__price").innerText;
 
-            let priceValue = parseFloat(
-                price.replace("VNĐ", "").replace(/\./g, "")
-            );
-            let totalPriceForItem = priceValue * quantity;
+        let priceValue = parseFloat(
+            price.replace("VNĐ", "").replace(/\./g, "")
+        );
+        let totalPriceForItem = priceValue * quantity;
 
-            data.push({
-                name: nameItem,
-                quantity: quantity,
-                price: totalPriceForItem,
-            });
+        data.push({
+            name: nameItem,
+            quantity: quantity,
+            price: totalPriceForItem,
         });
-
-        document.getElementById("dataField").value = JSON.stringify(data);
-
-        // Thu thập thông tin người dùng
-        const fullName = document.getElementById("fullName").value;
-        const phone = document.getElementById("phone").value;
-        const address = document.getElementById("address").value;
-
-        // Gửi thêm thông tin người dùng vào biểu mẫu
-        const orderForm = document.getElementById("orderForm");
-        orderForm.appendChild(createHiddenInput("fullName", fullName));
-        orderForm.appendChild(createHiddenInput("phone", phone));
-        orderForm.appendChild(createHiddenInput("address", address));
-
-        // Gửi biểu mẫu đến Google Sheets
-        const actionUrl =
-            "https://script.google.com/macros/s/AKfycbyCnVmPw36P0oY7GLQely1vrnaYh1K91LPXjrOWk8SaMafz-MwniZGoz1lbti8-wh7-/exec";
-        orderForm.action = actionUrl;
-        orderForm.method = "POST";
-        orderForm.submit();
     });
+
+    document.getElementById("dataField").value = JSON.stringify(data);
+
+    // Thu thập thông tin người dùng
+    const fullName = document.getElementById("fullName").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    // Gửi thêm thông tin người dùng vào biểu mẫu
+    const orderForm = document.getElementById("orderForm");
+    orderForm.appendChild(createHiddenInput("fullName", fullName));
+    orderForm.appendChild(createHiddenInput("phone", phone));
+    orderForm.appendChild(createHiddenInput("address", address));
+
+    // Gửi biểu mẫu đến Google Sheets
+    const actionUrl =
+        "https://script.google.com/macros/s/AKfycbwZNECv5hpK6IstStoc_6jNVLqm3zj5NFa4QjMS1-ZbIVC7olT-52_cLkyH22gQAHXUDw/exec";
+    orderForm.action = actionUrl;
+    orderForm.method = "POST";
+    orderForm.target = "_blank";
+    orderForm.submit();
+});
 
 function createHiddenInput(name, value) {
     let input = document.createElement("input");
