@@ -165,6 +165,12 @@ button {
   background: transparent;
 }
 
+.container {
+  width: 100%;
+  max-width: 1231px;
+  margin: 0 auto;
+}
+
 .section-desc {
   position: relative;
   border-bottom: 3px solid #008ecc;
@@ -181,12 +187,105 @@ button {
   line-height: 30px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1231px;
-  margin: 0 auto;
+/* PC */
+@media screen and (min-width: 992px) {
+  .navbar__list {
+    flex-wrap: wrap;
+  }
 }
-
+/* tablet */
+/* tablet / mobile */
+@media screen and (max-width: 991.98px) {
+  .container {
+    max-width: calc(100% - 48px);
+  }
+  .top-bar {
+    margin: 20px;
+  }
+  .top-bar .table-mobile__hidden {
+    display: none;
+    visibility: hidden;
+  }
+  .top-bar .control {
+    display: none;
+  }
+  .top-bar .action__item:nth-child(1) {
+    display: none;
+  }
+  .top-bar .logo__title {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .navbar__list {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero__item {
+    min-height: 454px;
+    margin-top: 30px;
+  }
+  .hero__media {
+    margin-right: -10px !important;
+    margin-bottom: 0;
+  }
+  .product__list {
+    overflow: auto;
+  }
+  .product-cate__list {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .slider .slider__list {
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    width: 100vw;
+  }
+  .daily__list {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+  }
+}
+/* mobile */
+@media screen and (max-width: 767px) {
+  .top-bar .action__list {
+    display: none;
+  }
+  .hero {
+    display: none;
+  }
+  .product .product-cate__item-wrap {
+    width: 120px;
+    height: 120px;
+  }
+  .product .product-cate__img {
+    object-fit: contain;
+    width: 70%;
+    height: 70%;
+  }
+  .daily .daily__img-wrap {
+    height: 202px !important;
+    width: 310px !important;
+  }
+  .daily .daily__item {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .download-app {
+    margin-bottom: 30px;
+  }
+}
 body.dark-mode {
   /* Tổng quan */
   --background: #1a1a1a; /* Thay đổi nền thành màu tối */
@@ -733,7 +832,7 @@ hr {
 .product__item {
   padding: 15px 12px;
   width: 227px;
-  height: auto;
+  height: 340px;
   flex-direction: column;
   border-radius: 16px;
   background: var(--product-bg-color);

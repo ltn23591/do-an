@@ -1,0 +1,125 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .navbar__list {
+        flex-wrap: wrap;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* tablet / mobile */
+@media screen and (max-width: 991.98px) {
+    .container {
+        max-width: calc(100% - 48px);
+    }
+    .top-bar {
+        margin: 20px;
+        .table-mobile__hidden {
+            display: none;
+            visibility: hidden;
+        }
+        .control {
+            display: none;
+        }
+        .action__item:nth-child(1) {
+            display: none;
+        }
+        .logo__title {
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+    .navbar__list {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero {
+        &__item {
+            min-height: 454px;
+            margin-top: 30px;
+        }
+        &__left {
+        }
+        &__media {
+            margin-right: -10px !important;
+            margin-bottom: 0;
+        }
+    }
+    .product {
+        &__list {
+            overflow: auto;
+        }
+        &__item {
+        }
+    }
+    .product-cate__list {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .slider {
+        .slider__list {
+            flex-direction: column;
+            row-gap: 40px;
+            align-items: center;
+            // justify-content: space-around !important;
+            width: 100vw;
+        }
+        &__item {
+        }
+    }
+    .daily__list {
+        display: flex !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .top-bar {
+        .action__list {
+            display: none;
+        }
+    }
+    .hero {
+        display: none;
+    }
+
+    .product {
+        .product-cate__item-wrap {
+            width: 120px;
+            height: 120px;
+        }
+        .product-cate__img {
+            object-fit: contain;
+            width: 70%;
+            height: 70%;
+        }
+    }
+    .daily {
+        .daily__img-wrap {
+            height: 202px !important;
+            width: 310px !important;
+        }
+        .daily__item {
+            display: flex;
+            cursor: pointer;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .download-app {
+        margin-bottom: 30px;
+    }
+}
