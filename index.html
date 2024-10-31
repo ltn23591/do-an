@@ -51,6 +51,39 @@
         <script src="./assets/js/form.js"></script>
     </head>
     <body>
+        <!-- Tablet & mobile -->
+        <header class="header__tablet">
+            <div class="menu__tablet">
+                <div class="menu__tablet-wrap">
+                    <h1 class="logo__title">
+                        <img
+                            src="./assets/img/logo.svg"
+                            alt="Logo ShopPlus"
+                            class="logo__img"
+                            loading="lazy"
+                        />
+                        ShopPlus
+                    </h1>
+                    <img
+                        src="./assets/icons/close-responsive.svg"
+                        alt=""
+                        class="icon icon__close"
+                    />
+                </div>
+                <div class="hidden-tablet action__item">
+                    <img
+                        src="./assets/icons/sign-in-up.svg"
+                        alt="Đăng nhập/Đăng kí"
+                        class="icon action__icon"
+                        loading="lazy"
+                    />
+                    <a href="./template/login.html" class="action__desc"
+                        >Đăng kí/Đăng nhập</a
+                    >
+                </div>
+            </div>
+        </header>
+
         <!-- Header -->
         <header id="header" class="header__fixed">
             <div class="menu-overlay"></div>
@@ -140,11 +173,16 @@
             </div>
             <div class="container">
                 <div class="top-bar">
+                    <img
+                        src="./assets/icons/logo.svg"
+                        alt=""
+                        class="menu__img"
+                    />
                     <div class="logo">
                         <img
-                            src="./assets/icons/logo.svg"
+                            src="./assets/img/logo.svg"
                             alt="Logo ShopPlus"
-                            class="logo__img"
+                            class=" logo__img"
                             loading="lazy"
                         />
                         <h1 class="logo__title">ShopPlus</h1>
@@ -228,157 +266,167 @@
             </div>
         </header>
 
-        <div class="container">
-            <!-- Navbar -->
-            <nav class="navbar" aria-label="Danh mục sản phẩm">
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Mua sắm</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Trái cây cao cấp</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Nội thất</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Thời trang</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Điện tử</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Sắc đẹp</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Cải thiện nhà cửa</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">
-                            <span class="navbar__title">Thể thao, đồ chơi</span>
-                            <span class="navbar__arrow"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Hero -->
-            <section class="hero">
-                <div class="swiper hero__swiper">
-                    <!-- Wrapper chứa các slide -->
-                    <div class="swiper-wrapper hero__list">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide hero__item">
-                            <div class="hero__left">
-                                <div class="hero__content">
-                                    <p class="hero__desc">
-                                        Ưu đãi trực tuyến tốt nhất cho đồng hồ
-                                        thông minh
-                                    </p>
-                                    <h2 class="hero__heading">
-                                        ĐỒNG HỒ THÔNG MINH.
-                                    </h2>
-                                    <p class="hero__sale">
-                                        Giảm giá lên đến 80%
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Hero right -->
-                            <div class="hero__media">
-                                <img
-                                    src="./assets/img/hero-item.png"
-                                    alt="Hình ảnh đồng hồ thông minh"
-                                    class="hero__img"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide hero__item">
-                            <div class="hero__left">
-                                <div class="hero__content">
-                                    <p class="hero__desc">
-                                        Ngắm nhìn cận cảnh cùng smartphone
-                                    </p>
-                                    <h2 class="hero__heading">
-                                        Iphone 16 Pro Max
-                                    </h2>
-                                    <p class="hero__sale">Ưu đãi cực cao</p>
-                                    <p class="hero__intro">
-                                        iPhone 16 Pro Max 6,9”3 & iPhone 16 Pro
-                                        6,3”3 Titan Tự Nhiên
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Hero right -->
-                            <div class="hero__media">
-                                <img
-                                    src="./assets/img/ip16.png"
-                                    alt="Hình ảnh đồng hồ thông minh"
-                                    class="hero__img"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
-                        <div class="swiper-slide hero__item">
-                            <div class="hero__left">
-                                <div class="hero__content">
-                                    <p class="hero__desc">
-                                        Kiệt tác huyền thoại
-                                    </p>
-                                    <h2 class="hero__heading">
-                                        Xiaomi 14 Ultra
-                                    </h2>
-                                    <p class="hero__sale">
-                                        Cấu hình siêu khủng
-                                    </p>
-                                    <p class="hero__intro">
-                                        Thiết kế huyền thoại Tính năng chụp ảnh
-                                        đỉnh cao
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Hero right -->
-                            <div class="hero__media">
-                                <img
-                                    src="./assets/img/xiaomi14.png"
-                                    alt="Hình ảnh đồng hồ thông minh"
-                                    class="hero__img"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <nav class="navbar__list">
+                    <div id="" class="navbar__item">
+                        <img
+                            id="icon-list-menu"
+                            class="navbar__icon"
+                            src="./assets/icons/phone.png"
+                            alt="phone"
+                        />
+                        <span href="#phone">Điện thoại</span>
                     </div>
+                    <div id="laptop" class="navbar__item">
+                        <img
+                            id="navbar__icon"
+                            class="navbar__icon"
+                            src="./assets/icons/laptop.png"
+                            alt="laptop"
+                        />
+                        <span href="#laptop">Laptop</span>
+                    </div>
+                    <div id="watch" class="navbar__item">
+                        <img
+                            id="navbar__icon"
+                            class="navbar__icon"
+                            src="./assets/icons/watch.png"
+                            alt="watch"
+                        />
+                        <span href="#watch">Đồng hồ</span>
+                    </div>
+                    <div id="fruit" class="navbar__item">
+                        <img
+                            id="navbar__icon"
+                            class="navbar__icon"
+                            src="./assets/icons/fruit.png"
+                            alt="fruit"
+                        />
+                        <span href="fruit">Trái cây</span>
+                    </div>
+                    <div id="promotion" class="navbar__item">
+                        <img
+                            id="navbar__icon"
+                            class="navbar__icon"
+                            src="./assets/icons/promotion.png"
+                            alt="promotion"
+                        />
+                        <a href="https://cellphones.com.vn/">
+                            <span>Khuyến mãi</span>
+                        </a>
+                    </div>
+                    <div id="news" class="navbar__item">
+                        <img
+                            id="navbar__icon"
+                            class="navbar__icon"
+                            src="./assets/icons/news.png"
+                            alt="news"
+                        />
+                        <a href="https://cellphones.com.vn/">
+                            <span>Tin tức</span>
+                        </a>
+                    </div>
+                </nav>
 
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-        </div>
+                <!-- Hero -->
+                <section class="hero">
+                    <div class="swiper hero__swiper">
+                        <!-- Wrapper chứa các slide -->
+                        <div class="swiper-wrapper hero__list">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide hero__item">
+                                <div class="hero__left">
+                                    <div class="hero__content">
+                                        <p class="hero__desc">
+                                            Ưu đãi trực tuyến tốt nhất cho đồng
+                                            hồ thông minh
+                                        </p>
+                                        <h2 class="hero__heading">
+                                            ĐỒNG HỒ THÔNG MINH.
+                                        </h2>
+                                        <p class="hero__sale">
+                                            Giảm giá lên đến 80%
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Hero right -->
+                                <div class="hero__media">
+                                    <img
+                                        src="./assets/img/hero-item.png"
+                                        alt="Hình ảnh đồng hồ thông minh"
+                                        class="hero__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide hero__item">
+                                <div class="hero__left">
+                                    <div class="hero__content">
+                                        <p class="hero__desc">
+                                            Ngắm nhìn cận cảnh cùng smartphone
+                                        </p>
+                                        <h2 class="hero__heading">
+                                            Iphone 16 Pro Max
+                                        </h2>
+                                        <p class="hero__sale">Ưu đãi cực cao</p>
+                                        <p class="hero__intro">
+                                            iPhone 16 Pro Max 6,9”3 & iPhone 16
+                                            Pro 6,3”3 Titan Tự Nhiên
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Hero right -->
+                                <div class="hero__media">
+                                    <img
+                                        src="./assets/img/ip16.png"
+                                        alt="Hình ảnh đồng hồ thông minh"
+                                        class="hero__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide hero__item">
+                                <div class="hero__left">
+                                    <div class="hero__content">
+                                        <p class="hero__desc">
+                                            Kiệt tác huyền thoại
+                                        </p>
+                                        <h2 class="hero__heading">
+                                            Xiaomi 14 Ultra
+                                        </h2>
+                                        <p class="hero__sale">
+                                            Cấu hình siêu khủng
+                                        </p>
+                                        <p class="hero__intro">
+                                            Thiết kế huyền thoại Tính năng chụp
+                                            ảnh đỉnh cao
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Hero right -->
+                                <div class="hero__media">
+                                    <img
+                                        src="./assets/img/xiaomi14.png"
+                                        alt="Hình ảnh đồng hồ thông minh"
+                                        class="hero__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+            </div>
+        </nav>
 
         <main>
             <section class="product">
@@ -1068,6 +1116,7 @@
         </footer>
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/swiper.js"></script>
+        <script src="./assets/js/menu.js"></script>
         <script src="./assets/js/theme.js "></script>
         <!-- Swiper JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>

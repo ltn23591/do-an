@@ -14,7 +14,7 @@
     &__item {
         padding: 15px 12px;
         width: 227px;
-        height: 340px;
+        height: 380px;
         @extend %flexCenter;
         flex-direction: column;
         border-radius: 16px;
@@ -30,7 +30,7 @@
     }
     &__thumb {
         width: 126px;
-        height: 180px;
+        height: 245px;
         @extend %flexCenter;
         justify-content: center;
 

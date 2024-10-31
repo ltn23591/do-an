@@ -3,14 +3,78 @@
     .navbar__list {
         flex-wrap: wrap;
     }
+    .logo__img {
+        // display: none !important;
+    }
+    .header__tablet {
+        display: none;
+    }
+    .menu__img {
+        display: none;
+    }
 }
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .total-wrap {
+        .buy {
+            height: auto;
+            width: auto;
+            font-size: 1.7rem !important;
+            margin-right: 50px !important;
+        }
+        .total {
+            font-size: 1.7rem !important;
+            margin-left: 50px;
+        }
+    }
+    .card__item-img {
+        width: 80% !important;
+        height: 80% !important;
+    }
 }
 
 /* tablet / mobile */
 @media screen and (max-width: 991.98px) {
+    .buy {
+        width: 100px;
+        height: 100px;
+    }
+    .menu__tablet-wrap {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo__title {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            color: var(--text-color-dark);
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 0.75;
+            margin-left: 13px;
+        }
+        .icon__close {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    #Sign-in {
+        display: none;
+    }
+    .hidden-tablet {
+        display: flex;
+    }
+    .menu__tablet {
+        transition: all ease 0.5s;
+        position: fixed;
+        inset: 0 16% 0 17%;
+        background: #fff;
+        height: 100vh;
+        z-index: 20;
+        transform: translateX(-125%);
+    }
     .container {
         max-width: calc(100% - 48px);
     }
@@ -21,15 +85,20 @@
             visibility: hidden;
         }
         .control {
-            display: none;
+            // display: none;
         }
         .action__item:nth-child(1) {
-            display: none;
+            display: flex;
         }
         .logo__title {
+            display: none !important;
+        }
+        .logo__img {
             position: absolute;
             right: 50%;
             transform: translateX(50%);
+            width: 100px;
+            height: 100px;
         }
     }
     .navbar__list {

@@ -1,0 +1,22 @@
+// theme
+.control {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .control__dark,
+    .control__light {
+        color: var(--icon-filter);
+        position: absolute;
+        cursor: pointer;
+        transition: all ease 0.6s;
+    }
+    .control__light {
+        display: none;
+    }
+    .control__dark {
+        display: block;
+    }
+}
