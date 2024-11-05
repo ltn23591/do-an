@@ -144,7 +144,7 @@
             </div>
 
             <!-- Form nhập thông tin người dùng -->
-            <div class="form__user" id="userForm">
+            <form class="form__user" id="userForm">
                 <img
                     src="./assets/icons/icon-user.svg"
                     alt=""
@@ -183,10 +183,10 @@
                         required
                     />
                 </div>
-                <button type="button" class="menu-btn" id="confirmOrderButton">
+                <button type="submit" class="menu-btn" id="confirmOrderButton">
                     Xác nhận đơn hàng
                 </button>
-            </div>
+            </form>
             <div class="container">
                 <div class="top-bar">
                     <img
@@ -293,7 +293,7 @@
                             src="./assets/icons/phone.png"
                             alt="phone"
                         />
-                        <a href="#phone">Điện thoại</a>
+                        <a href="#move-phone">Điện thoại</a>
                     </div>
                     <div id="laptop" class="navbar__item">
                         <img
@@ -446,7 +446,7 @@
 
         <main class="hide-elm">
             <!-- Product phone -->
-            <section class="product">
+            <section id="move-phone" class="product">
                 <div class="container">
                     <div class="product__inner">
                         <div class="product__top">

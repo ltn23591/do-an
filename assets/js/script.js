@@ -155,11 +155,23 @@ overlayUser.addEventListener("click", () => {
     formUser.style.opacity = "0";
     formUser.style.visibility = "hidden";
 });
-// Xử lý khi người dùng xác nhận đơn hàng
+
 const buyItem = document.getElementById("confirmOrderButton");
 buyItem.addEventListener("click", function (e) {
-    // Lấy thông tin từ giỏ hàng
     e.preventDefault();
+
+    // Thu thập thông tin người dùng
+    const fullName = document.getElementById("fullName").value.trim();
+    const phone = document.querySelector("#phone-user").value.trim();
+    const address = document.getElementById("address").value.trim();
+
+    // Kiểm tra các trường thông tin có được điền hay chưa
+    if (!fullName || !phone || !address) {
+        alert("Vui lòng điền đầy đủ thông tin trước khi xác nhận đơn hàng.");
+        return;
+    }
+
+    // Lấy thông tin từ giỏ hàng
     let items = document.querySelectorAll(".card__item");
     let data = [];
 
@@ -182,11 +194,6 @@ buyItem.addEventListener("click", function (e) {
 
     document.getElementById("dataField").value = JSON.stringify(data);
 
-    // Thu thập thông tin người dùng
-    const fullName = document.getElementById("fullName").value;
-    const phone = document.querySelector("#phone-user").value;
-    const address = document.getElementById("address").value;
-
     // Gửi thêm thông tin người dùng vào biểu mẫu
     const orderForm = document.getElementById("orderForm");
     orderForm.appendChild(createHiddenInput("fullName", fullName));
@@ -198,7 +205,7 @@ buyItem.addEventListener("click", function (e) {
         "https://script.google.com/macros/s/AKfycbwZNECv5hpK6IstStoc_6jNVLqm3zj5NFa4QjMS1-ZbIVC7olT-52_cLkyH22gQAHXUDw/exec";
     orderForm.action = actionUrl;
     orderForm.method = "POST";
-    // orderForm.target = "_blank";
+    orderForm.target = "_blank";
     orderForm.submit();
 });
 
