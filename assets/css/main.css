@@ -361,7 +361,9 @@ button {
 /* mobile */
 @media screen and (max-width: 767px) {
   .wrapper {
-    translate: 47% 344px;
+    position: absolute;
+    bottom: 57%;
+    right: 41%;
   }
   .container__parent {
     display: none !important;
@@ -1387,9 +1389,9 @@ hr {
   --bg-color: #fff;
   --bg-color-alt: #666;
   --main-color: #323232;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* switch card */

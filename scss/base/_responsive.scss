@@ -197,9 +197,10 @@
 /* mobile */
 @media screen and (max-width: 767px) {
     .wrapper {
-        translate: 47% 344px;
+        position: absolute;
+        bottom: 57%;
+        right: 41%;
     }
-
     .container__parent {
         display: none !important;
     }
