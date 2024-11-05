@@ -213,6 +213,13 @@ button {
 }
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .container-login {
+    position: absolute !important;
+    top: 14px !important;
+  }
+  .wrapper {
+    display: none !important;
+  }
   .total-wrap .buy {
     height: auto;
     width: auto;
@@ -361,8 +368,8 @@ button {
 /* mobile */
 @media screen and (max-width: 767px) {
   .wrapper {
-    position: absolute;
-    bottom: 57%;
+    position: absolute !important;
+    bottom: -325px;
     right: 41%;
   }
   .container__parent {
@@ -1586,6 +1593,10 @@ hr {
   font-weight: 600;
   color: var(--font-color);
   cursor: pointer;
+}
+
+.body-wrap {
+  position: relative;
 }
 
 .form__user {
