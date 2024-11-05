@@ -191,7 +191,7 @@ button {
 /* PC */
 @media screen and (min-width: 992px) {
   .wrapper {
-    display: none;
+    display: none !important;
   }
   .pc-none {
     display: none !important;
@@ -1517,6 +1517,12 @@ hr {
   border-radius: 5px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
+}
+.flip-card__front .logo,
+.flip-card__back .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flip-card__back {

@@ -365,6 +365,11 @@
 
 .flip-card__front,
 .flip-card__back {
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     padding: 20px;
     position: absolute;
     display: flex;

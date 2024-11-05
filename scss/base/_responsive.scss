@@ -1,7 +1,7 @@
 /* PC */
 @media screen and (min-width: 992px) {
     .wrapper {
-        display: none;
+        display: none !important;
     }
     .pc-none {
         display: none !important;
