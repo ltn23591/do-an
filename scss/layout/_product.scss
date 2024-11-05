@@ -6,10 +6,10 @@
     margin-top: 70px;
     &__list {
         margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-around;
         align-items: center;
-        column-gap: 16px;
+        gap: 20px;
+        row-gap: 30px;
     }
     &__item {
         padding: 15px 12px;
@@ -32,13 +32,13 @@
         width: 126px;
         height: 245px;
         @extend %flexCenter;
+        object-fit: cover;
         justify-content: center;
-
-        &__img {
-            object-fit: contain;
-            width: 126px;
-            height: 180px;
-        }
+    }
+    &__img {
+        object-fit: contain;
+        width: 126px;
+        height: 180px;
     }
 
     &__content {
@@ -81,13 +81,27 @@
         }
     }
     &__sale {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -9px;
+            width: 6px;
+            height: 30%;
+            background: #086a99;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
         position: absolute;
         top: 0;
         z-index: 1;
-        right: 0;
-        width: 51px;
-        height: 53px;
-        border-radius: 0px 16px;
+        left: -6px;
+        width: 111px;
+        height: 32px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
         background: var(--primary-color);
         color: var(--text-color-light);
         padding: 10px 8px;
@@ -111,7 +125,12 @@
         .product-cate__item {
             @extend %flexCenter;
             flex-direction: column;
-
+            cursor: pointer;
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .product-cate__item-wrap {
                 background-color: var(--product-bg-color);
                 width: 145px;
@@ -127,6 +146,18 @@
             }
         }
     }
+    // Phone
+}
+.product-cate__img {
+    transition: all ease 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.pb {
+    padding-bottom: 100px;
+    height: 100px;
+    width: 100vw;
 }
 
 .toast {
@@ -156,4 +187,30 @@
         height: 30px;
         filter: var(--icon-filter);
     }
+}
+#phoneSection,
+#ElecSection {
+    display: none;
+}
+.icon-wrap {
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .goBack {
+        filter: var(--icon-filter);
+        width: 50px;
+        height: 50px;
+    }
+    span {
+        font: {
+            weight: 700;
+            size: 1.8rem;
+        }
+        color: var(--text-color-grey);
+    }
+}
+
+.act-block {
+    display: block !important;
 }

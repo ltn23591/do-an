@@ -26,9 +26,7 @@
         line-height: 0.75;
         margin-left: 13px;
     }
-    .filter img {
-        filter: n;
-    }
+
 }
 
 .search {
@@ -84,7 +82,7 @@
         padding: 14px 14px;
         border-radius: 18px;
         column-gap: 10px;
-        span {
+        a {
             font-weight: 700;
             color: var(--text-color-grey);
         }

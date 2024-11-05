@@ -9,7 +9,7 @@
         <link
             rel="icon"
             type="image/png"
-            href="./assets/favicon/favicon-48x48.png"
+            href="../assets/favicon/favicon-48x48.png"
             sizes="48x48"
         />
         <link
@@ -49,8 +49,24 @@
         <link rel="stylesheet" href="./assets/css/main.css" />
         <!-- JS -->
         <script src="./assets/js/form.js"></script>
+        <script src="./assets/js/copy.js"></script>
     </head>
     <body>
+        <!-- Toast -->
+        <div class="toast" role="alert" aria-live="assertive">
+            <div class="toast-body">
+                <svg
+                    class="icon-black icon-msg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                >
+                    <path
+                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                    />
+                </svg>
+                <span class="msg">Thêm vào thành công</span>
+            </div>
+        </div>
         <!-- Tablet & mobile -->
         <header class="header__tablet">
             <div class="menu__tablet">
@@ -149,9 +165,9 @@
                     <label class="form__label" for="phone">Số điện thoại</label>
                     <input
                         class="form__input-user"
+                        id="phone-user"
                         type="tel"
                         name="phone"
-                        id="phone"
                         placeholder="Số điện thoại"
                         required
                     />
@@ -277,7 +293,7 @@
                             src="./assets/icons/phone.png"
                             alt="phone"
                         />
-                        <span href="#phone">Điện thoại</span>
+                        <a href="#phone">Điện thoại</a>
                     </div>
                     <div id="laptop" class="navbar__item">
                         <img
@@ -286,25 +302,25 @@
                             src="./assets/icons/laptop.png"
                             alt="laptop"
                         />
-                        <span href="#laptop">Laptop</span>
+                        <a href="#laptop">Laptop</a>
                     </div>
-                    <div id="watch" class="navbar__item">
+                    <div class="navbar__item">
                         <img
                             id="navbar__icon"
                             class="navbar__icon"
                             src="./assets/icons/watch.png"
                             alt="watch"
                         />
-                        <span href="#watch">Đồng hồ</span>
+                        <a href="#watch">Đồng hồ</a>
                     </div>
-                    <div id="fruit" class="navbar__item">
+                    <div class="navbar__item">
                         <img
                             id="navbar__icon"
                             class="navbar__icon"
                             src="./assets/icons/fruit.png"
                             alt="fruit"
                         />
-                        <span href="fruit">Trái cây</span>
+                        <a href="#fruit">Trái cây</a>
                     </div>
                     <div id="promotion" class="navbar__item">
                         <img
@@ -428,7 +444,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="hide-elm">
             <section class="product">
                 <div class="container">
                     <div class="product__inner">
@@ -571,27 +587,14 @@
                                 <!-- Thêm các sản phẩm khác tại đây -->
                             </ul>
                         </div>
-                        <div class="toast" role="alert" aria-live="assertive">
-                            <div class="toast-body">
-                                <svg
-                                    class="icon-black icon-msg"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512"
-                                >
-                                    <path
-                                        d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                                    />
-                                </svg>
-                                <span class="msg">Thêm vào thành công</span>
-                            </div>
-                        </div>
+
                         <div class="product__bottom">
                             <div class="section-desc">
                                 Mua Sắm Từ
                                 <strong>Các Danh Mục Hàng Đầu</strong>
                             </div>
                             <ul class="product-cate__list">
-                                <li class="product-cate__item">
+                                <li id="phone" class="product-cate__item">
                                     <div class="product-cate__item-wrap">
                                         <img
                                             src="./assets/img/product-12.svg"
@@ -600,7 +603,10 @@
                                             loading="lazy"
                                         />
                                     </div>
-                                    <p class="product-cate__title">
+                                    <p
+                                        href="./template/phone.html"
+                                        class="product-cate__title"
+                                    >
                                         Điện thoại
                                     </p>
                                 </li>
@@ -615,7 +621,7 @@
                                     </div>
                                     <p class="product-cate__title">Mỹ phẩm</p>
                                 </li>
-                                <li class="product-cate__item">
+                                <li id="Elec" class="product-cate__item">
                                     <div class="product-cate__item-wrap">
                                         <img
                                             src="./assets/img/product-07.svg"
@@ -675,7 +681,7 @@
                     </div>
                 </div>
             </section>
-            <section class="product">
+            <section id="watch" class="product">
                 <div class="container">
                     <div class="product__inner">
                         <div class="product__top">
@@ -922,18 +928,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Dots -->
-                        <!-- <ul class="slider__dots" aria-label="Chỉ số trang">
-                            <li class="slider__dot slider__dot-active"></li>
-                            <li class="slider__dot"></li>
-                            <li class="slider__dot"></li>
-                        </ul> -->
                     </div>
                 </div>
             </section>
 
             <!-- Daily -->
-            <section class="daily">
+            <section id="fruit" class="daily">
                 <div class="container">
                     <div class="section-desc">
                         Đồ dùng <strong>cần thiết hàng ngày</strong>
@@ -1009,6 +1009,691 @@
                 </div>
             </section>
         </main>
+
+        <!-- Phone -->
+        <section id="phoneSection" class="product phone-section">
+            <div class="container">
+                <div class="product__inner">
+                    <div class="product__top">
+                        <h2 id="phone-scroll" class="section-desc">
+                            Nhận Ưu Đãi Tốt Nhất Từ
+                            <strong>Điện Thoại Thông Minh</strong>
+                        </h2>
+                        <div class="icon-wrap">
+                            <svg
+                                class="goBack"
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
+                                />
+                            </svg>
+                            <span>Trở về</span>
+                        </div>
+                        <ul class="product__list">
+                            <!-- Item 1 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/product-01.svg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Galaxy S22 Ultra
+                                    </h3>
+                                    <div class="product__price">
+                                        19.872.800 VNĐ
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm Galaxy S22 Ultra vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 2 -->
+                            <li class="product__item">
+                                <div class="product__sale">30% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/product-02.svg"
+                                        alt="iPhone 14 Pro"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Galaxy M13 (4GB | 64 GB)
+                                    </h3>
+                                    <div class="product__price">
+                                        25.000.000 VNĐ
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm iPhone 14 Pro vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 3 -->
+                            <li class="product__item">
+                                <div class="product__sale">40% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/product-04.svg"
+                                        alt="Xiaomi Mi 11"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Galaxy M33 (4GB | 64GB)
+                                    </h3>
+                                    <div class="product__price">
+                                        15.500.000 VNĐ
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm Xiaomi Mi 11 vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 4 -->
+                            <li class="product__item">
+                                <div class="product__sale">20% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/product-04.svg"
+                                        alt="Samsung Galaxy Watch"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Galaxy M53 (4GB | 64 GB)
+                                    </h3>
+                                    <div class="product__price">
+                                        7.500.000 VNĐ
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm Samsung Galaxy Watch vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 5 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/product-05.svg"
+                                        alt="Sony WH-1000XM4"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Galaxy S22 Ultra
+                                    </h3>
+                                    <div class="product__price">
+                                        6.000.000 VNĐ
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm Sony WH-1000XM4 vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+
+                            <!-- Item 6 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-01.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A05s 6GB128GB
+                                    </h3>
+                                    <div class="product__price">3.490.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 6 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-01.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A06 4GB64GB
+                                    </h3>
+                                    <div class="product__price">3.190.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 7 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-04.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A15 5G 8GB256GB
+                                    </h3>
+                                    <div class="product__price">5.390.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 8 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-04.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A15 8GB256GB
+                                    </h3>
+                                    <div class="product__price">4.590.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 9 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-05.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A25 5G 8GB128GB
+                                    </h3>
+                                    <div class="product__price">6.290.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 10 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-06.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy A35 5G 8GB256GB
+                                    </h3>
+                                    <div class="product__price">8.490.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 11 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-07.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy M15 5G 4GB128GB
+                                    </h3>
+                                    <div class="product__price">4.090.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 12 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-08.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy M35 5G 8GB256GB
+                                    </h3>
+                                    <div class="product__price">7.990.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 13 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-09.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy M54 5G 8GB256GB
+                                    </h3>
+                                    <div class="product__price">7.990.000₫</div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 14 -->
+                            <li class="product__item">
+                                <div class="product__sale">10% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện thoại/phone-10.jpg"
+                                        alt=""
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Samsung Galaxy M55 5G 12GB256GB
+                                    </h3>
+                                    <div class="product__price">
+                                        10.190.000₫
+                                    </div>
+                                    <button class="product__buy" aria-label="">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+
+                            <!-- Thêm các sản phẩm khác tại đây -->
+                        </ul>
+                    </div>
+                    <div class="toast" role="alert" aria-live="assertive">
+                        <div class="toast-body">
+                            <svg
+                                class="icon-black icon-msg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                                />
+                            </svg>
+                            <span class="msg">Thêm vào thành công</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb"></div>
+        </section>
+
+        <!-- Elec -->
+        <section id="ElecSection" class="product">
+            <div class="container">
+                <div class="product__inner">
+                    <div class="product__top">
+                        <h2 class="section-desc">
+                            Nhận Ưu Đãi Tốt Nhất Từ
+                            <strong>Điện Tử</strong>
+                        </h2>
+                        <div class="icon-wrap">
+                            <svg
+                                class="goBack"
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
+                                />
+                            </svg>
+                            <span>Trở về</span>
+                        </div>
+                        <ul class="product__list">
+                            <!-- Item 1 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-1.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Lò vi sóng Electrolux EMM23K22B 23 lít
+                                    </h3>
+                                    <div class="product__price">2.365.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 2 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-2.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Lò vi sóng Sharp R-205VN(S) 20 lít
+                                    </h3>
+                                    <div class="product__price">1.690.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 3 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-3.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Máy lạnh Casper Inverter 1 HP
+                                    </h3>
+                                    <div class="product__price">6.490.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 4 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-4.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Máy lạnh Midea Inverter 1 HP
+                                    </h3>
+                                    <div class="product__price">5.990.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 5 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-5.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Máy nước nóng gián tiếp Rapido 20 lít
+                                    </h3>
+                                    <div class="product__price">1.690.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 6 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-6.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Máy nước nóng trực tiếp Electrolux 4500W
+                                    </h3>
+                                    <div class="product__price">1.790.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 7 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-7.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Tivi Aqua QLED 4K 55 inch
+                                    </h3>
+                                    <div class="product__price">9.990.000₫</div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 8 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-8.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Tivi Samsung 4K 55 inch
+                                    </h3>
+                                    <div class="product__price">
+                                        12.490.000₫
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 9 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-9.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Tủ lạnh LG Inverter 470 lít
+                                    </h3>
+                                    <div class="product__price">
+                                        14.140.000₫
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- Item 10 -->
+                            <li class="product__item">
+                                <div class="product__sale">50% OFF</div>
+                                <div class="product__thumb">
+                                    <img
+                                        src="./assets/img/điện tử/elec-10.jpg"
+                                        alt="Galaxy S22 Ultra"
+                                        class="product__img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        Tủ lạnh Samsung Inverter 655 lít
+                                    </h3>
+                                    <div class="product__price">
+                                        18.290.000₫
+                                    </div>
+                                    <button
+                                        class="product__buy"
+                                        aria-label="Thêm  vào giỏ hàng"
+                                    >
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </li>
+
+                            <!-- Thêm các sản phẩm khác tại đây -->
+                        </ul>
+                    </div>
+                    <div class="toast" role="alert" aria-live="assertive">
+                        <div class="toast-body">
+                            <svg
+                                class="icon-black icon-msg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                                />
+                            </svg>
+                            <span class="msg">Thêm vào thành công</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb"></div>
+        </section>
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
@@ -1114,6 +1799,7 @@
                 <p>&copy; 2022 All rights reserved. Reliance Retail Ltd.</p>
             </div>
         </footer>
+
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/swiper.js"></script>
         <script src="./assets/js/menu.js"></script>

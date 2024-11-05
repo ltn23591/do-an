@@ -42,7 +42,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../assets/css/main.css" />
     </head>
-    <body>
+    <body class="body-wrap">
         <div class="container__parent">
             <div class="container-login" id="container">
                 <div class="form-container sign-up">
@@ -74,7 +74,6 @@
                 <div class="form-container sign-in">
                     <form>
                         <h1 class="login__heading">Đăng nhập</h1>
-
                         <span>hoặc sử dụng mật khẩu e-mail của bạn</span>
                         <div class="form__group">
                             <input required class="form__input" type="text" />
@@ -90,6 +89,9 @@
                         </div>
                         <a href="#">Quên mật khẩu?</a>
                         <button>Đăng nhập</button>
+                        <button class="hidden pc-none" id="register">
+                            Đăng kí
+                        </button>
                     </form>
                 </div>
                 <div class="toggle-container">
@@ -116,7 +118,7 @@
                                 Đăng ký thông tin cá nhân của bạn để tiếp tục
                                 trải nghiệm mua sắm
                             </p>
-                            <button class="hidden" id="register">
+                            <button class="hidden-login hidden" id="register">
                                 Đăng kí
                             </button>
                         </div>
@@ -125,6 +127,60 @@
             </div>
         </div>
 
+        <div class="wrapper">
+            <div class="card-switch">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-mobile" />
+                    <span class="slider-login"></span>
+                    <span class="card-side"></span>
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front">
+                            <div class="title">Đăng nhập</div>
+                            <form class="flip-card__form" action="">
+                                <input
+                                    class="flip-card__input"
+                                    name="email"
+                                    placeholder="Email"
+                                    type="email"
+                                />
+                                <input
+                                    class="flip-card__input"
+                                    name="password"
+                                    placeholder="Password"
+                                    type="password"
+                                />
+                                <button class="flip-card__btn">
+                                    Đăng nhập
+                                </button>
+                            </form>
+                        </div>
+                        <div class="flip-card__back">
+                            <div class="title">Đăng kí</div>
+                            <form class="flip-card__form" action="">
+                                <input
+                                    class="flip-card__input"
+                                    placeholder="Name"
+                                    type="name"
+                                />
+                                <input
+                                    class="flip-card__input"
+                                    name="email"
+                                    placeholder="Email"
+                                    type="email"
+                                />
+                                <input
+                                    class="flip-card__input"
+                                    name="password"
+                                    placeholder="Password"
+                                    type="password"
+                                />
+                                <button class="flip-card__btn">Đăng kí!</button>
+                            </form>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
         <script src="../assets/js/login.js"></script>
     </body>
 </html>

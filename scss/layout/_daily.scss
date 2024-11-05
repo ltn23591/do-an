@@ -2,8 +2,7 @@
     margin-top: 90px;
     padding-bottom: 150px;
     &__list {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        display: flex;
         column-gap: 10px;
         justify-content: center;
         align-items: center;

@@ -184,7 +184,7 @@ buyItem.addEventListener("click", function (e) {
 
     // Thu thập thông tin người dùng
     const fullName = document.getElementById("fullName").value;
-    const phone = document.getElementById("phone").value;
+    const phone = document.querySelector("#phone-user").value;
     const address = document.getElementById("address").value;
 
     // Gửi thêm thông tin người dùng vào biểu mẫu
@@ -198,7 +198,7 @@ buyItem.addEventListener("click", function (e) {
         "https://script.google.com/macros/s/AKfycbwZNECv5hpK6IstStoc_6jNVLqm3zj5NFa4QjMS1-ZbIVC7olT-52_cLkyH22gQAHXUDw/exec";
     orderForm.action = actionUrl;
     orderForm.method = "POST";
-    orderForm.target = "_blank";
+    // orderForm.target = "_blank";
     orderForm.submit();
 });
 
@@ -209,3 +209,35 @@ function createHiddenInput(name, value) {
     input.value = value;
     return input;
 }
+
+const main = document.querySelector(".hide-elm");
+const listDanhmuc = document.querySelectorAll(".product-cate__item");
+let act = document.querySelector(".act-block");
+
+listDanhmuc.forEach((item) => {
+    item.addEventListener("click", () => {
+        if (act) {
+            act.classList.remove("act-block");
+        }
+        main.style.display = "none";
+        let abc = item.id + "Section";
+        let bcd = document.getElementById(abc);
+        if (abc) {
+            bcd.classList.add("act-block");
+            act = bcd;
+        }
+        document.getElementById("phone-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
+    });
+});
+const back = document.querySelectorAll(".icon-wrap");
+back.forEach((item) => {
+    item.addEventListener("click", () => {
+        if (act) {
+            act.classList.remove("act-block");
+        }
+        main.style.display = "block";
+        phoneSection.style.display = "none";
+    });
+});
