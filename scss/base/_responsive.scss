@@ -290,8 +290,11 @@
     .new-2,
     .new-3,
     .new-4 {
-        .new__img {
+        .new__img-block {
             width: 370px !important;
+        }
+        .new__heading {
+            max-width: 97% !important;
         }
     }
     .new {

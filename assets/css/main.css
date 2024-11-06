@@ -438,11 +438,17 @@ button {
   .download-app {
     margin-bottom: 30px;
   }
-  .new-1 .new__img,
-  .new-2 .new__img,
-  .new-3 .new__img,
-  .new-4 .new__img {
+  .new-1 .new__img-block,
+  .new-2 .new__img-block,
+  .new-3 .new__img-block,
+  .new-4 .new__img-block {
     width: 370px !important;
+  }
+  .new-1 .new__heading,
+  .new-2 .new__heading,
+  .new-3 .new__heading,
+  .new-4 .new__heading {
+    max-width: 97% !important;
   }
   .new {
     margin-bottom: 0 !important;
