@@ -924,7 +924,8 @@ hr {
 
 #phoneSection,
 #ElecSection,
-#MyPhamSection {
+#MyPhamSection,
+#NoiThatSection {
   display: none;
 }
 

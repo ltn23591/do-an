@@ -236,6 +236,15 @@ listDanhmuc.forEach((item) => {
         document.getElementById("phone-scroll").scrollIntoView({
             behavior: "smooth", // Hiệu ứng cuộn mượt mà
         });
+        document.getElementById("Elec-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
+        document.getElementById("MyPham-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
+        document.getElementById("NoiThat-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
     });
 });
 const back = document.querySelectorAll(".icon-wrap");

@@ -14,17 +14,14 @@
 
         .slider__item:nth-child(2) {
             background: var(--slider-bg-item2);
-
             .slider__name {
                 background: var(--slider-bg-item2-name);
-                color: var( --slider-text-black);
+                color: var(--slider-text-black);
             }
-
             .slider__sale {
                 z-index: 2;
-                color: var( --slider-text-black);
+                color: var(--slider-text-black);
             }
-
             .slider__decor {
                 border-color: var(--slider-bg-item2);
                 outline-color: var(--slider-bg-item2-name);
@@ -34,16 +31,13 @@
 
         .slider__item:nth-child(3) {
             background: var(--slider-bg-item3);
-
             .slider__name {
-                color: var( --slider-text-black);
+                color: var(--slider-text-black);
                 background: var(--slider-bg-item3-name);
             }
-
             .slider__sale {
-                color: var( --slider-text-black);
+                color: var(--slider-text-black);
             }
-
             .slider__decor {
                 border-color: var(--slider-bg-item3);
                 outline-color: var(--slider-bg-item3-name);
@@ -51,7 +45,6 @@
             }
         }
     }
-
     &__item {
         position: relative;
         display: flex;
@@ -64,12 +57,10 @@
         padding: 20px;
         overflow: hidden;
         transition: ease 0.5s all;
-
         &:hover {
             .slider__media-img {
                 transform: scale(1.2);
-            }
-
+            }   
             .slider__decor {
                 top: 187px;
                 right: 259px;
