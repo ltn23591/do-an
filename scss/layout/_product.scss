@@ -148,6 +148,9 @@
     }
 }
 .product-cate__img {
+    width: 60%;
+    height: 60%;
+
     transition: all ease 0.3s;
     &:hover {
         transform: scale(1.1);
@@ -190,7 +193,9 @@
 #phoneSection,
 #ElecSection,
 #MyPhamSection,
-#NoiThatSection {
+#NoiThatSection,
+#laptopSection,
+#watchSection {
     display: none;
 }
 .icon-wrap {

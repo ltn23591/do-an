@@ -885,6 +885,8 @@ hr {
 }
 
 .product-cate__img {
+  width: 60%;
+  height: 60%;
   transition: all ease 0.3s;
 }
 .product-cate__img:hover {
@@ -925,7 +927,9 @@ hr {
 #phoneSection,
 #ElecSection,
 #MyPhamSection,
-#NoiThatSection {
+#NoiThatSection,
+#laptopSection,
+#watchSection {
   display: none;
 }
 

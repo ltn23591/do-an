@@ -245,6 +245,12 @@ listDanhmuc.forEach((item) => {
         document.getElementById("NoiThat-scroll").scrollIntoView({
             behavior: "smooth", // Hiệu ứng cuộn mượt mà
         });
+        document.getElementById("Laptop-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
+        document.getElementById("watch-scroll").scrollIntoView({
+            behavior: "smooth", // Hiệu ứng cuộn mượt mà
+        });
     });
 });
 const back = document.querySelectorAll(".icon-wrap");
