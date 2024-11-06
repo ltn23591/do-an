@@ -13,8 +13,12 @@
     background: var(--background);
 }
 
-.top-bar,
 .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.top-bar {
     @extend %flexCenter;
     .logo__title {
         display: flex;
@@ -26,7 +30,6 @@
         line-height: 0.75;
         margin-left: 13px;
     }
-
 }
 
 .search {

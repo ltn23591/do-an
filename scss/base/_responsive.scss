@@ -27,6 +27,9 @@
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    footer {
+        margin-bottom: 382px !important;
+    }
     .container-login {
         position: absolute !important;
         top: 14px !important;
@@ -61,6 +64,9 @@
         &__list {
             justify-content: center !important;
         }
+    }
+    .new__heading {
+        max-width: 80% !important;
     }
 }
 
@@ -115,7 +121,7 @@
         transition: all ease 0.5s;
         position: fixed;
         inset: 0 16% 0 17%;
-        background: #fff;
+        background: var(--menu-bg);
         height: 100vh;
         z-index: 20;
         transform: translateX(-125%);
@@ -125,7 +131,7 @@
         .action__desc {
             display: inline-block;
             margin-left: 6px;
-            color: var(--text-color-grey);
+            color: var(--menu-text) !important;
             font-size: 1.6rem;
             font-weight: 700;
             line-height: 1.12;
@@ -142,7 +148,7 @@
             visibility: hidden;
         }
         .control {
-            display: none;
+            transform: translateX(332px);
         }
         .action__item:nth-child(1) {
             display: flex;
@@ -199,6 +205,21 @@
         flex-wrap: wrap;
         gap: 30px !important;
     }
+    .new {
+        &__list {
+            margin: 0 auto;
+            justify-content: center !important;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        &__item {
+        }
+        &__title {
+        }
+    }
+    footer {
+        margin-bottom: 220px;
+    }
 }
 
 /* mobile */
@@ -216,9 +237,13 @@
         height: 100vh !important;
     }
     .top-bar {
+        align-items: center !important;
         .action__list {
             display: none;
         }
+    }
+    .control {
+        transform: translateX(0px) !important;
     }
     .hero {
         display: none;
@@ -260,5 +285,20 @@
     }
     .download-app {
         margin-bottom: 30px;
+    }
+    .new-1,
+    .new-2,
+    .new-3,
+    .new-4 {
+        .new__img {
+            width: 370px !important;
+        }
+    }
+    .new {
+        margin-bottom: 0 !important;
+    }
+    footer {
+        position: relative;
+        bottom: -220px;
     }
 }
