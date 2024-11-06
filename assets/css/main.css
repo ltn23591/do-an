@@ -591,6 +591,9 @@ body.dark-mode {
   column-gap: 10px;
 }
 .navbar__item a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   font-weight: 700;
   color: var(--text-color-grey);
 }
@@ -699,12 +702,11 @@ hr {
 
 .daily {
   margin-top: 90px;
-  padding-bottom: 150px;
 }
 .daily__list {
   display: flex;
   column-gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .daily__list .daily__item {
@@ -1818,6 +1820,103 @@ hr {
   justify-content: flex-start;
   display: flex;
   flex-direction: column;
+}
+
+.new {
+  margin-bottom: 100px;
+}
+.new__list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+.new__item {
+  cursor: pointer;
+}
+.new__img {
+  border-radius: 12px;
+}
+.new__title {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.new-1,
+.new-2,
+.new-3,
+.new-4 {
+  margin-top: 100px;
+}
+.new-1 .new__title,
+.new-2 .new__title,
+.new-3 .new__title,
+.new-4 .new__title {
+  color: var(--text-color-grey);
+  font-size: 2rem;
+}
+.new-1 .new__title-large,
+.new-2 .new__title-large,
+.new-3 .new__title-large,
+.new-4 .new__title-large {
+  font-size: 2.5rem;
+  font-weight: 750;
+  color: var(--text-color-grey);
+  margin-bottom: 10px;
+}
+
+.new__title-small {
+  margin-top: 100px;
+  font-size: 2rem;
+  color: var(--text-color-grey);
+  position: relative;
+}
+.new__title-small::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -21px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  background: var(--text-color-grey);
+}
+
+.container .new__heading {
+  margin-top: 30px;
+  font-size: 3.5rem;
+  color: var(--text-color-grey);
+  font-weight: 700;
+  max-width: 70%;
+}
+
+.new__title {
+  margin: 20px 0;
+  color: var(--text-color-grey);
+  font-size: 2rem;
+}
+
+.new__img-wrap {
+  margin: 30px 0;
+  text-align: center;
+}
+.new__img-wrap .new__img {
+  width: 500px;
+}
+.new__img-wrap .new__caption {
+  margin-top: 10px;
+  color: var(--text-color-grey);
+  opacity: 0.9;
+}
+
+.new__desc {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-color-grey);
 }
 
 /*# sourceMappingURL=main.css.map */
