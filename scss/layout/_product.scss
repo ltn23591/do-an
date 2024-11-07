@@ -2,6 +2,12 @@
     display: flex;
     align-items: center;
 }
+.original__price {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--product-price-color);
+    margin-top: 10px;
+}
 .product {
     margin-top: 70px;
     &__list {
@@ -10,6 +16,7 @@
         align-items: center;
         gap: 20px;
         row-gap: 30px;
+        overflow-y: hidden;
     }
     &__item {
         padding: 15px 12px;
@@ -49,17 +56,19 @@
     &__title {
         font-family: "Poppins", sans-serif;
         text-align: center;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 700;
         line-height: 1.12;
         color: var(--product-text-color-title);
+        padding-bottom: 5px;
     }
 
     &__price {
+        font-size: 1.8rem;
         font-weight: 500;
         color: var(--product-price-color);
         margin-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
         border-bottom: 1px solid var(--border-color);
     }
     &__buy {
@@ -187,7 +196,7 @@
     .icon-msg {
         width: 30px;
         height: 30px;
-        filter: var(--icon-filter);
+        filter: var(--icon-filter-black) !important;
     }
 }
 #phoneSection,

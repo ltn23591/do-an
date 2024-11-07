@@ -27,8 +27,33 @@
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .form__user {
+        width: 70% !important;
+    }
+    .icon__close {
+        transform: translateX(136px) !important;
+        width: 30px !important;
+    }
+    .card__price {
+        white-space: nowrap;
+    }
+    .card__title {
+        padding: 16px !important;
+    }
+    .card__item {
+        margin-left: -12px !important;
+    }
+    .card__title-desc {
+        white-space: nowrap;
+    }
+    .navbar__list {
+        justify-content: center !important;
+    }
     footer {
         margin-bottom: 382px !important;
+        h3 {
+            white-space: nowrap;
+        }
     }
     .container-login {
         position: absolute !important;
@@ -38,6 +63,7 @@
         display: none !important;
     }
     .total-wrap {
+        margin: 0 !important;
         .buy {
             height: auto;
             width: auto;
@@ -95,7 +121,7 @@
         padding: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         .logo__title {
             display: flex;
             align-items: center;
@@ -109,6 +135,7 @@
         .icon__close {
             width: 50px;
             height: 50px;
+            transform: translateX(134px);
         }
     }
     #Sign-in {
@@ -124,9 +151,10 @@
         background: var(--menu-bg);
         height: 100vh;
         z-index: 20;
-        transform: translateX(-125%);
+        transform: translateX(-129%);
         .action__item {
             @extend %flexCenter;
+            padding: 20px;
         }
         .action__desc {
             display: inline-block;
@@ -212,10 +240,6 @@
             flex-wrap: wrap;
             gap: 30px;
         }
-        &__item {
-        }
-        &__title {
-        }
     }
     footer {
         margin-bottom: 220px;
@@ -224,6 +248,91 @@
 
 /* mobile */
 @media screen and (max-width: 767px) {
+    .total {
+        margin-left: 10px;
+    }
+    .logo__title {
+        font-size: 2rem !important;
+    }
+    .icon__close {
+        transform: translateX(23px) !important;
+        width: 30px !important;
+    }
+    .toast {
+        width: 205px !important;
+        height: 57px !important;
+    }
+    .msg {
+        font-size: 1.4rem !important;
+    }
+    .icon-msg {
+        width: 20px !important;
+    }
+    .card__title-desc {
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
+    .menu-drawer {
+        inset: 0 0 0 27% !important;
+        .buy {
+            padding: 10px !important;
+            width: 121px;
+            height: 42px;
+            white-space: nowrap;
+            font-size: 1.5rem !important;
+            margin-right: 15px !important;
+        }
+        .total-wrap {
+            margin-right: 0 !important;
+        }
+        .total {
+            white-space: nowrap;
+            font-size: 1.2rem !important;
+        }
+        .card__item-img {
+            width: 50px !important;
+        }
+        .card__price {
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        .card__remove {
+            font-size: 1rem !important;
+        }
+        .card__item {
+            margin-left: -27px !important;
+        }
+        .card__title {
+            padding: 26px !important;
+            column-gap: 42px;
+        }
+    }
+    .menu__tablet {
+        .action__list {
+            align-items: flex-start;
+            gap: 10px;
+            flex-direction: column;
+        }
+    }
+    .control + .action__list {
+        transform: translateX(-12px);
+        .action__desc {
+            display: none;
+        }
+        .action__item {
+            position: relative;
+        }
+        .action__item::after {
+            position: absolute;
+            right: -9px;
+            content: "";
+            display: block;
+            width: 2px;
+            height: 24px;
+            background: #000;
+            opacity: 0.8;
+        }
+    }
     .wrapper {
         position: absolute !important;
         bottom: -325px;
@@ -233,18 +342,39 @@
         display: none !important;
     }
     .form__user {
+        top: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
     }
     .top-bar {
         align-items: center !important;
-        .action__list {
+        .action__item:nth-child(2) {
+            display: none;
+        }
+        .action__line {
             display: none;
         }
     }
     .control {
-        transform: translateX(0px) !important;
+        transform: translate(134px, 1px) !important;
+        position: relative;
+        &::after {
+            position: absolute;
+            right: -70px;
+            content: "";
+            display: inline-block;
+            margin-left: 6px;
+            color: var(--text-color-grey);
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.12;
+            white-space: nowrap;
+        }
+        .action__item {
+            transform: translateY(-12px);
+        }
     }
+
     .hero {
         display: none;
     }

@@ -21,6 +21,7 @@ overlay.addEventListener("click", () => {
     document.body.classList.remove("lock-scroll");
     overlay.style.display = "none";
     menushop.style.transform = "translateX(100%)";
+    menuTablet.style.transform = "translateX(-125%)";
 });
 
 const btn = document.querySelectorAll(".product__buy");

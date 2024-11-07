@@ -71,21 +71,22 @@
         <header class="header__tablet">
             <div class="menu__tablet">
                 <div class="menu__tablet-wrap">
-                    <h1 class="logo__title">
+                    <div class="logo">
                         <img
                             src="./assets/img/logo.svg"
                             alt="Logo ShopPlus"
                             class="logo__img"
                             loading="lazy"
                         />
-                        ShopPlus
-                    </h1>
+                        <h1 class="logo__title">ShopPlus</h1>
+                    </div>
                     <img
                         src="./assets/icons/close-responsive.svg"
                         alt=""
                         class="icon icon__close"
                     />
                 </div>
+
                 <div class="hidden-tablet action__item">
                     <img
                         src="./assets/icons/sign-in-up.svg"
@@ -184,7 +185,21 @@
                     />
                 </div>
                 <button type="submit" class="menu-btn" id="confirmOrderButton">
-                    Xác nhận đơn hàng
+                    <span class="text">Xác nhận đơn hàng</span>
+                    <span class="svg">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="20"
+                            viewBox="0 0 38 15"
+                            fill="none"
+                        >
+                            <path
+                                fill="white"
+                                d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
+                            ></path>
+                        </svg>
+                    </span>
                 </button>
             </form>
             <div class="container">
@@ -457,7 +472,7 @@
                             <ul class="product__list">
                                 <!-- Item 1 -->
                                 <li class="product__item">
-                                    <div class="product__sale">50% OFF</div>
+                                    <div class="product__sale">Giảm 50%</div>
                                     <div class="product__thumb">
                                         <img
                                             src="./assets/img/product-01.svg"
@@ -470,8 +485,11 @@
                                         <h3 class="product__title">
                                             Galaxy S22 Ultra
                                         </h3>
+                                        <div class="original__price">
+                                            <del>29.808.000 VNĐ</del>
+                                        </div>
                                         <div class="product__price">
-                                            19.872.800 VNĐ
+                                            19.872.000 VNĐ
                                         </div>
                                         <button
                                             class="product__buy"
@@ -483,7 +501,7 @@
                                 </li>
                                 <!-- Item 2 -->
                                 <li class="product__item">
-                                    <div class="product__sale">30% OFF</div>
+                                    <div class="product__sale">Giảm 30%</div>
                                     <div class="product__thumb">
                                         <img
                                             src="./assets/img/product-02.svg"
@@ -494,8 +512,12 @@
                                     </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy M13 (4GB | 64 GB)
+                                            Galaxy M13 <br />
+                                            (4GB | 64 GB)
                                         </h3>
+                                        <div class="original__price">
+                                            <del>32.500.000 VNĐ</del>
+                                        </div>
                                         <div class="product__price">
                                             25.000.000 VNĐ
                                         </div>
@@ -509,7 +531,7 @@
                                 </li>
                                 <!-- Item 3 -->
                                 <li class="product__item">
-                                    <div class="product__sale">40% OFF</div>
+                                    <div class="product__sale">Giảm 40%</div>
                                     <div class="product__thumb">
                                         <img
                                             src="./assets/img/product-03.svg"
@@ -520,8 +542,11 @@
                                     </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy M33 (4GB | 64GB)
+                                            Galaxy M33 <br />(4GB | 64GB)
                                         </h3>
+                                        <div class="original__price">
+                                            <del>21.700.000 VNĐ</del>
+                                        </div>
                                         <div class="product__price">
                                             15.500.000 VNĐ
                                         </div>
@@ -535,7 +560,7 @@
                                 </li>
                                 <!-- Item 4 -->
                                 <li class="product__item">
-                                    <div class="product__sale">20% OFF</div>
+                                    <div class="product__sale">Giảm 20%</div>
                                     <div class="product__thumb">
                                         <img
                                             src="./assets/img/product-04.svg"
@@ -546,8 +571,11 @@
                                     </div>
                                     <div class="product__content">
                                         <h3 class="product__title">
-                                            Galaxy M53 (4GB | 64 GB)
+                                            Galaxy M53 <br />(4GB | 64 GB)
                                         </h3>
+                                        <div class="original__price">
+                                            <del>9.000.000 VNĐ</del>
+                                        </div>
                                         <div class="product__price">
                                             7.500.000 VNĐ
                                         </div>
@@ -561,7 +589,7 @@
                                 </li>
                                 <!-- Item 5 -->
                                 <li class="product__item">
-                                    <div class="product__sale">10% OFF</div>
+                                    <div class="product__sale">Giảm 10%</div>
                                     <div class="product__thumb">
                                         <img
                                             src="./assets/img/product-05.svg"
@@ -574,6 +602,9 @@
                                         <h3 class="product__title">
                                             Galaxy S22 Ultra
                                         </h3>
+                                        <div class="original__price">
+                                            <del>6.600.000 VNĐ</del>
+                                        </div>
                                         <div class="product__price">
                                             6.000.000 VNĐ
                                         </div>
@@ -665,17 +696,6 @@
                                         />
                                     </div>
                                     <p class="product-cate__title">Laptop</p>
-                                </li>
-                                <li class="product-cate__item">
-                                    <div class="product-cate__item-wrap">
-                                        <img
-                                            src="./assets/img/product-11.svg"
-                                            alt="Trang sức"
-                                            class="product-cate__img"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                    <p class="product-cate__title">Trang sức</p>
                                 </li>
                             </ul>
                         </div>
@@ -1260,7 +1280,7 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/product-01.svg"
@@ -1273,6 +1293,9 @@
                                     <h3 class="product__title">
                                         Galaxy S22 Ultra
                                     </h3>
+                                    <div class="original__price">
+                                        <del>20.432.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
                                         19.872.800 VNĐ
                                     </div>
@@ -1286,7 +1309,7 @@
                             </li>
                             <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">30% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/product-02.svg"
@@ -1297,8 +1320,11 @@
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title">
-                                        Galaxy M13 (4GB | 64 GB)
+                                        Galaxy M13 <br />(4GB | 64 GB)
                                     </h3>
+                                    <div class="original__price">
+                                        <del>29.954.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
                                         25.000.000 VNĐ
                                     </div>
@@ -1312,7 +1338,6 @@
                             </li>
                             <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">40% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/product-04.svg"
@@ -1323,8 +1348,9 @@
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title">
-                                        Galaxy M33 (4GB | 64GB)
+                                        Galaxy M33 <br />(4GB | 64GB)
                                     </h3>
+
                                     <div class="product__price">
                                         15.500.000 VNĐ
                                     </div>
@@ -1338,7 +1364,7 @@
                             </li>
                             <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">20% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/product-04.svg"
@@ -1349,8 +1375,11 @@
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title">
-                                        Galaxy M53 (4GB | 64 GB)
+                                        Galaxy M53 <br />(4GB | 64 GB)
                                     </h3>
+                                    <div class="original__price">
+                                        <del>9.527.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
                                         7.500.000 VNĐ
                                     </div>
@@ -1364,7 +1393,6 @@
                             </li>
                             <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/product-05.svg"
@@ -1391,7 +1419,7 @@
 
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-01.jpg"
@@ -1404,7 +1432,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A05s 6GB128GB
                                     </h3>
-                                    <div class="product__price">3.490.000₫</div>
+                                    <div class="original__price">
+                                        <del>5.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        3.490.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1412,7 +1445,7 @@
                             </li>
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-01.jpg"
@@ -1425,7 +1458,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A06 4GB64GB
                                     </h3>
-                                    <div class="product__price">3.190.000₫</div>
+                                    <div class="original__price">
+                                        <del>5.950.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        3.190.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1433,7 +1471,6 @@
                             </li>
                             <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-04.jpg"
@@ -1446,7 +1483,9 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A15 5G 8GB256GB
                                     </h3>
-                                    <div class="product__price">5.390.000₫</div>
+                                    <div class="product__price">
+                                        5.390.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1454,7 +1493,7 @@
                             </li>
                             <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-04.jpg"
@@ -1467,7 +1506,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A15 8GB256GB
                                     </h3>
-                                    <div class="product__price">4.590.000₫</div>
+                                    <div class="original__price">
+                                        <del>5.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        4.590.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1475,7 +1519,7 @@
                             </li>
                             <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-05.jpg"
@@ -1488,7 +1532,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A25 5G 8GB128GB
                                     </h3>
-                                    <div class="product__price">6.290.000₫</div>
+                                    <div class="original__price">
+                                        <del>9.297.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        6.290.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1496,7 +1545,7 @@
                             </li>
                             <!-- Item 10 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-06.jpg"
@@ -1509,7 +1558,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy A35 5G 8GB256GB
                                     </h3>
-                                    <div class="product__price">8.490.000₫</div>
+                                    <div class="original__price">
+                                        <del>9.656.330 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        8.490.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1517,7 +1571,7 @@
                             </li>
                             <!-- Item 11 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-07.jpg"
@@ -1530,7 +1584,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy M15 5G 4GB128GB
                                     </h3>
-                                    <div class="product__price">4.090.000₫</div>
+                                    <div class="original__price">
+                                        <del>8.345.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        4.090.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1538,7 +1597,6 @@
                             </li>
                             <!-- Item 12 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-08.jpg"
@@ -1551,7 +1609,9 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy M35 5G 8GB256GB
                                     </h3>
-                                    <div class="product__price">7.990.000₫</div>
+                                    <div class="product__price">
+                                        7.990.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1559,7 +1619,7 @@
                             </li>
                             <!-- Item 13 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-09.jpg"
@@ -1572,7 +1632,12 @@
                                     <h3 class="product__title">
                                         Samsung Galaxy M54 5G 8GB256GB
                                     </h3>
-                                    <div class="product__price">7.990.000₫</div>
+                                    <div class="original__price">
+                                        <del>15.120.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        7.990.000 VNĐ
+                                    </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -1580,7 +1645,6 @@
                             </li>
                             <!-- Item 14 -->
                             <li class="product__item">
-                                <div class="product__sale">10% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện thoại/phone-10.jpg"
@@ -1594,7 +1658,7 @@
                                         Samsung Galaxy M55 5G 12GB256GB
                                     </h3>
                                     <div class="product__price">
-                                        10.190.000₫
+                                        10.190.000 VNĐ
                                     </div>
                                     <button class="product__buy" aria-label="">
                                         Thêm vào giỏ hàng
@@ -1651,7 +1715,7 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-1.jpg"
@@ -1664,7 +1728,12 @@
                                     <h3 class="product__title">
                                         Lò vi sóng Electrolux EMM23K22B 23 lít
                                     </h3>
-                                    <div class="product__price">2.365.000₫</div>
+                                    <div class="original__price">
+                                        <del>5.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        2.365.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1675,7 +1744,7 @@
                             </li>
                             <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-2.jpg"
@@ -1688,7 +1757,12 @@
                                     <h3 class="product__title">
                                         Lò vi sóng Sharp R-205VN(S) 20 lít
                                     </h3>
-                                    <div class="product__price">1.690.000₫</div>
+                                    <div class="original__price">
+                                        <del>3.424.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        1.690.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1699,7 +1773,6 @@
                             </li>
                             <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-3.jpg"
@@ -1712,7 +1785,9 @@
                                     <h3 class="product__title">
                                         Máy lạnh Casper Inverter 1 HP
                                     </h3>
-                                    <div class="product__price">6.490.000₫</div>
+                                    <div class="product__price">
+                                        6.490.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1723,7 +1798,7 @@
                             </li>
                             <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-4.jpg"
@@ -1736,7 +1811,12 @@
                                     <h3 class="product__title">
                                         Máy lạnh Midea Inverter 1 HP
                                     </h3>
-                                    <div class="product__price">5.990.000₫</div>
+                                    <div class="original__price">
+                                        <del>7.563.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        5.990.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1747,7 +1827,7 @@
                             </li>
                             <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-5.jpg"
@@ -1760,7 +1840,12 @@
                                     <h3 class="product__title">
                                         Máy nước nóng gián tiếp Rapido 20 lít
                                     </h3>
-                                    <div class="product__price">1.690.000₫</div>
+                                    <div class="original__price">
+                                        <del>3.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        1.690.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1771,7 +1856,7 @@
                             </li>
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-6.jpg"
@@ -1784,7 +1869,12 @@
                                     <h3 class="product__title">
                                         Máy nước nóng trực tiếp Electrolux 4500W
                                     </h3>
-                                    <div class="product__price">1.790.000₫</div>
+                                    <div class="original__price">
+                                        <del>3.768.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        1.790.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1795,7 +1885,7 @@
                             </li>
                             <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-7.jpg"
@@ -1808,7 +1898,12 @@
                                     <h3 class="product__title">
                                         Tivi Aqua QLED 4K 55 inch
                                     </h3>
-                                    <div class="product__price">9.990.000₫</div>
+                                    <div class="original__price">
+                                        <del>10.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        9.990.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1819,7 +1914,7 @@
                             </li>
                             <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-8.jpg"
@@ -1832,8 +1927,11 @@
                                     <h3 class="product__title">
                                         Tivi Samsung 4K 55 inch
                                     </h3>
+                                    <div class="original__price">
+                                        <del>15.345.400 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        12.490.000₫
+                                        12.490.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -1845,7 +1943,7 @@
                             </li>
                             <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-9.jpg"
@@ -1858,8 +1956,11 @@
                                     <h3 class="product__title">
                                         Tủ lạnh LG Inverter 470 lít
                                     </h3>
+                                    <div class="original__price">
+                                        <del>19.234.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        14.140.000₫
+                                        14.140.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -1871,7 +1972,7 @@
                             </li>
                             <!-- Item 10 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/điện tử/elec-10.jpg"
@@ -1884,8 +1985,11 @@
                                     <h3 class="product__title">
                                         Tủ lạnh Samsung Inverter 655 lít
                                     </h3>
+                                    <div class="original__price">
+                                        <del>20.233.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        18.290.000₫
+                                        18.290.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -1932,7 +2036,7 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-1.jpg"
@@ -1945,7 +2049,12 @@
                                     <h3 class="product__title">
                                         Chấm Mụn Neogen Dermalogy
                                     </h3>
-                                    <div class="product__price">243.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>320.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        243.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1956,7 +2065,7 @@
                             </li>
                             <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-2.jpg"
@@ -1969,7 +2078,12 @@
                                     <h3 class="product__title">
                                         Dầu Gội Dược Liệu Nguyên Xuân
                                     </h3>
-                                    <div class="product__price">152.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>220.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        152.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -1980,7 +2094,7 @@
                             </li>
                             <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-3.jpg"
@@ -1994,7 +2108,12 @@
                                         Dầu Gội Selsun Ngừa Gàu & Giảm Ngứa Da
                                         Đầu
                                     </h3>
-                                    <div class="product__price">170.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>200.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        170.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2005,7 +2124,7 @@
                             </li>
                             <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-4.jpg"
@@ -2018,7 +2137,10 @@
                                     <h3 class="product__title">
                                         Dưỡng Môi Đa Năng Pure Paw Paw
                                     </h3>
-                                    <div class="product__price">85.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>110.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">85.000 VNĐ</div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2029,7 +2151,7 @@
                             </li>
                             <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-5.jpg"
@@ -2042,7 +2164,12 @@
                                     <h3 class="product__title">
                                         Gel Dưỡng Megaduo Plus Giảm Mụn
                                     </h3>
-                                    <div class="product__price">125.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>150.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        125.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2053,7 +2180,7 @@
                             </li>
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-6.jpg"
@@ -2066,7 +2193,12 @@
                                     <h3 class="product__title">
                                         Kem Chống Nắng Skin1004
                                     </h3>
-                                    <div class="product__price">229.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>315.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        229.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2077,7 +2209,7 @@
                             </li>
                             <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-7.jpg"
@@ -2090,7 +2222,10 @@
                                     <h3 class="product__title">
                                         Sáp Dưỡng Ẩm Vaseline
                                     </h3>
-                                    <div class="product__price">56.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>76.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">56.000 VNĐ</div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2101,7 +2236,7 @@
                             </li>
                             <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-8.jpg"
@@ -2114,7 +2249,12 @@
                                     <h3 class="product__title">
                                         Sữa Chống Nắng Sunplay Skin Aqua
                                     </h3>
-                                    <div class="product__price">166.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>332.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        166.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2125,7 +2265,7 @@
                             </li>
                             <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-9.jpg"
@@ -2138,7 +2278,12 @@
                                     <h3 class="product__title">
                                         Sữa Rửa Mặt CeraVe Sạch Sâu
                                     </h3>
-                                    <div class="product__price">254.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>312.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        254.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2149,7 +2294,7 @@
                             </li>
                             <!-- Item 10 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/mỹ phẩm/MyPham-10.jpg"
@@ -2162,7 +2307,12 @@
                                     <h3 class="product__title">
                                         Sữa Rửa Mặt Cetaphil
                                     </h3>
-                                    <div class="product__price">304.000 ₫</div>
+                                    <div class="original__price">
+                                        <del>582.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        304.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2207,7 +2357,7 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-1.jpg"
@@ -2220,7 +2370,10 @@
                                     <h3 class="product__title">
                                         Ghế xoay nhân viên văn phòng lưới thấp
                                     </h3>
-                                    <div class="product__price">449,000₫</div>
+                                    <div class="original__price">
+                                        <del>500.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">449,000VNĐ</div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2231,7 +2384,7 @@
                             </li>
                             <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-2.jpg"
@@ -2244,7 +2397,12 @@
                                     <h3 class="product__title">
                                         GIƯỜNG ĐƠN POMPEII MÀU ĐEN 1.2
                                     </h3>
-                                    <div class="product__price">4,850,000₫</div>
+                                    <div class="original__price">
+                                        <del>6.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        4,850,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2255,7 +2413,7 @@
                             </li>
                             <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-3.jpg"
@@ -2268,7 +2426,12 @@
                                     <h3 class="product__title">
                                         Kệ tivi gỗ sồi Mỹ 4 hộc kéo mẫu 2022
                                     </h3>
-                                    <div class="product__price">4,500,000</div>
+                                    <div class="original__price">
+                                        <del>7.520.200 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        4,500,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2279,7 +2442,7 @@
                             </li>
                             <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-4.jpg"
@@ -2292,7 +2455,12 @@
                                     <h3 class="product__title">
                                         Sofa giường ZD1303
                                     </h3>
-                                    <div class="product__price">9,800,000₫</div>
+                                    <div class="original__price">
+                                        <del>15.547.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        9,800,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2303,7 +2471,7 @@
                             </li>
                             <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-5.jpg"
@@ -2316,8 +2484,11 @@
                                     <h3 class="product__title">
                                         Sofa thư giãn 3 băng ZT21
                                     </h3>
+                                    <div class="original__price">
+                                        <del>14.134.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        12,900,000₫
+                                        12,900,000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2329,7 +2500,7 @@
                             </li>
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-6.jpg"
@@ -2343,8 +2514,11 @@
                                         Tủ Bếp Đa Năng Để Đồ, Tích Hợp Tủ Rượu
                                         KG29
                                     </h3>
+                                    <div class="original__price">
+                                        <del>13.200.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        6.600.000 ₫
+                                        6.600.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2356,7 +2530,6 @@
                             </li>
                             <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-7.jpg"
@@ -2369,7 +2542,9 @@
                                     <h3 class="product__title">
                                         Tủ giày cánh mây chân gỗ melamine
                                     </h3>
-                                    <div class="product__price">1,710,000₫</div>
+                                    <div class="product__price">
+                                        1,710,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2380,7 +2555,7 @@
                             </li>
                             <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-8.jpg"
@@ -2393,7 +2568,12 @@
                                     <h3 class="product__title">
                                         Tủ giày gỗ công nghiệp KG-04
                                     </h3>
-                                    <div class="product__price">3.500.000₫</div>
+                                    <div class="original__price">
+                                        <del>7.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        3.500.000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2404,7 +2584,6 @@
                             </li>
                             <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-1.jpg"
@@ -2417,7 +2596,9 @@
                                     <h3 class="product__title">
                                         Tủ kệ tivi rút gỗ melamine 2 đầu
                                     </h3>
-                                    <div class="product__price">1,870,000₫</div>
+                                    <div class="product__price">
+                                        1,870,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2428,7 +2609,7 @@
                             </li>
                             <!-- Item 10 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/nội thất/nothat-10.jpg"
@@ -2441,7 +2622,12 @@
                                     <h3 class="product__title">
                                         Tủ tài liệu thấp 3 cánh 3 ngăn kéo
                                     </h3>
-                                    <div class="product__price">1,300,000₫</div>
+                                    <div class="original__price">
+                                        <del>2.520.000 VNĐ</del>
+                                    </div>
+                                    <div class="product__price">
+                                        1,300,000 VNĐ
+                                    </div>
                                     <button
                                         class="product__buy"
                                         aria-label="Thêm  vào giỏ hàng"
@@ -2487,7 +2673,7 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-01.webp"
@@ -2501,8 +2687,11 @@
                                         Laptop ASUS Zenbook S 14
                                         UX5406SA-PV140WS
                                     </h3>
+                                    <div class="original__price">
+                                        <del>59.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        43.790.000 ₫
+                                        43.790.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2514,7 +2703,7 @@
                             </li>
                             <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-02.webp"
@@ -2528,8 +2717,11 @@
                                         Laptop ASUS ROG Zephyrus G16 GA605WI
                                         2024
                                     </h3>
+                                    <div class="original__price">
+                                        <del>80.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        76.990.000 ₫
+                                        76.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2541,7 +2733,7 @@
                             </li>
                             <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-03.webp"
@@ -2555,8 +2747,11 @@
                                         Laptop ASUS Vivobook 15X Oled
                                         M3504YA-L1268W
                                     </h3>
+                                    <div class="original__price">
+                                        <del>18.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        14.490.000 ₫
+                                        14.490.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2568,7 +2763,7 @@
                             </li>
                             <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 5%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-04.webp"
@@ -2582,8 +2777,11 @@
                                         Laptop ACER Predator Helios Neo 14
                                         PHN14-51-96HG
                                     </h3>
+                                    <div class="original__price">
+                                        <del>59.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        58.390.000 ₫
+                                        58.390.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2595,7 +2793,7 @@
                             </li>
                             <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 40%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-05.webp"
@@ -2608,8 +2806,11 @@
                                     <h3 class="product__title">
                                         Laptop ASUS TUF Gaming A14 2024
                                     </h3>
+                                    <div class="original__price">
+                                        <del>69.342.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        42.390.000 ₫
+                                        42.390.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2621,7 +2822,7 @@
                             </li>
                             <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-06.webp"
@@ -2634,8 +2835,11 @@
                                     <h3 class="product__title">
                                         Laptop HP Pavilion 15-eg2089TU
                                     </h3>
+                                    <div class="original__price">
+                                        <del>30.453.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        22.090.000 ₫
+                                        22.090.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2647,7 +2851,7 @@
                             </li>
                             <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 30%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-07.webp"
@@ -2659,10 +2863,12 @@
                                 <div class="product__content">
                                     <h3 class="product__title">
                                         Laptop MSI Stealth 16 Mercedes AMG
-                                        Motorsport A1VGG-293VN
                                     </h3>
+                                    <div class="original__price">
+                                        <del>75.457.320 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        70.990.000 ₫
+                                        70.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2674,7 +2880,7 @@
                             </li>
                             <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-08.webp"
@@ -2687,8 +2893,11 @@
                                     <h3 class="product__title">
                                         Laptop HP Pavilion 15-eg2088TU
                                     </h3>
+                                    <div class="original__price">
+                                        <del>30.634.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        23.590.000 ₫
+                                        23.590.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2700,7 +2909,7 @@
                             </li>
                             <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-09.webp"
@@ -2713,8 +2922,11 @@
                                     <h3 class="product__title">
                                         Laptop ASUS ROG Flow X16 GV601VV-NF044W
                                     </h3>
+                                    <div class="original__price">
+                                        <del>60.234.400 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        51.790.000 ₫
+                                        51.790.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2726,7 +2938,7 @@
                             </li>
                             <!-- Item 10 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 10%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-10.webp"
@@ -2740,8 +2952,11 @@
                                         Laptop Lenovo ThinkBook 14 G7 IML
                                         21MR006YVN
                                     </h3>
+                                    <div class="original__price">
+                                        <del>25.627.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        21.490.000 ₫
+                                        21.490.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2753,7 +2968,7 @@
                             </li>
                             <!-- Item 11 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 20%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-11.webp"
@@ -2767,8 +2982,11 @@
                                         Laptop ASUS VivoBook 15 OLED
                                         A1505VA-MA492W
                                     </h3>
+                                    <div class="original__price">
+                                        <del>29.234.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        20.990.000 ₫
+                                        20.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2780,7 +2998,7 @@
                             </li>
                             <!-- Item12 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-12.webp"
@@ -2794,8 +3012,11 @@
                                         Laptop ASUS Vivobook 14X OLED
                                         A1405ZA-KM263W
                                     </h3>
+                                    <div class="original__price">
+                                        <del>9.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        18.990.000 ₫
+                                        18.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2807,7 +3028,7 @@
                             </li>
                             <!-- Item13 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-13.webp"
@@ -2821,8 +3042,11 @@
                                         Laptop gaming Lenovo Legion 5 16IRX9 -
                                         83DG0051VN
                                     </h3>
+                                    <div class="original__price">
+                                        <del>9.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        42.990.000 ₫
+                                        42.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2834,7 +3058,7 @@
                             </li>
                             <!-- Item14 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-14.webp"
@@ -2847,8 +3071,11 @@
                                     <h3 class="product__title">
                                         Laptop Lenovo LOQ 15IAX9 - 83GS001QVN
                                     </h3>
+                                    <div class="original__price">
+                                        <del>9.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        24.990.000 ₫
+                                        24.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2860,7 +3087,7 @@
                             </li>
                             <!-- Item15 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
+                                <div class="product__sale">Giảm 50%</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/Laptop/laptop-15.webp"
@@ -2873,8 +3100,11 @@
                                     <h3 class="product__title">
                                         Laptop ACER Swift X 14 AI SFX14-72G-708X
                                     </h3>
+                                    <div class="original__price">
+                                        <del>9.520.000 VNĐ</del>
+                                    </div>
                                     <div class="product__price">
-                                        47.490.000 ₫
+                                        47.490.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2921,7 +3151,6 @@
                         <ul class="product__list">
                             <!-- Item 1 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-1.webp"
@@ -2934,8 +3163,9 @@
                                     <h3 class="product__title">
                                         Đồng hồ Apple Watch SE GPS 40mm Midnight
                                     </h3>
+
                                     <div class="product__price">
-                                        2.990.000 ₫
+                                        8.690.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2945,8 +3175,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 2 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-2.webp"
@@ -2960,7 +3190,7 @@
                                         Đồng hồ Apple Watch SE GPS 40mm Midnight
                                     </h3>
                                     <div class="product__price">
-                                        2.990.000 ₫
+                                        8.190.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2970,8 +3200,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 3 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-3.webp"
@@ -2986,7 +3216,7 @@
                                         Pink
                                     </h3>
                                     <div class="product__price">
-                                        5.990.000 ₫
+                                        7.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -2997,7 +3227,6 @@
                                 </div>
                             </li>
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-4.webp"
@@ -3012,7 +3241,7 @@
                                         Pink
                                     </h3>
                                     <div class="product__price">
-                                        5.990.000 ₫
+                                        8.190.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3022,8 +3251,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 4 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-5.webp"
@@ -3038,7 +3267,7 @@
                                         Pink
                                     </h3>
                                     <div class="product__price">
-                                        5.990.000 ₫
+                                        6.590.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3048,8 +3277,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 5 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-6.webp"
@@ -3063,7 +3292,7 @@
                                         Đồng hồ Apple Watch SE GPS 40mm Midnight
                                     </h3>
                                     <div class="product__price">
-                                        2.990.000 ₫
+                                        8.690.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3073,8 +3302,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 6 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-7.webp"
@@ -3089,7 +3318,7 @@
                                         Starlight
                                     </h3>
                                     <div class="product__price">
-                                        5.990.000 ₫
+                                        8.190.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3099,8 +3328,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 7 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-8.webp"
@@ -3114,7 +3343,7 @@
                                         Đồng hồ Apple Watch SE GPS 40mm Midnight
                                     </h3>
                                     <div class="product__price">
-                                        2.990.000 ₫
+                                        7.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3124,8 +3353,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 8 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-9.webp"
@@ -3140,7 +3369,7 @@
                                         Starlight
                                     </h3>
                                     <div class="product__price">
-                                        5.990.000 ₫
+                                        8.690.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3150,8 +3379,8 @@
                                     </button>
                                 </div>
                             </li>
+                            <!-- Item 9 -->
                             <li class="product__item">
-                                <div class="product__sale">50% OFF</div>
                                 <div class="product__thumb">
                                     <img
                                         src="./assets/img/đồng hồ/watch-10.webp"
@@ -3165,7 +3394,7 @@
                                         Đồng hồ Apple Watch SE GPS 40mm Midnight
                                     </h3>
                                     <div class="product__price">
-                                        2.990.000 ₫
+                                        7.990.000 VNĐ
                                     </div>
                                     <button
                                         class="product__buy"
@@ -3183,6 +3412,7 @@
             </div>
             <div class="pb"></div>
         </section>
+
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
@@ -3197,7 +3427,7 @@
                     </div>
 
                     <div class="contact-us">
-                        <h3>Contact Us</h3>
+                        <h3>Thông tin liên hệ</h3>
                         <div class="footer__icon-wrap">
                             <svg
                                 class="footer__icon"

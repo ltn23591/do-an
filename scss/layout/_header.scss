@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.lock-scroll {
+    overflow-y: hidden;
+}
 .header__fixed {
     @extend %flexCenter;
     position: sticky;

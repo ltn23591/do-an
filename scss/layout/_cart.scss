@@ -122,8 +122,12 @@
 .card__item-img {
     width: 100px;
 }
-.cart__item-media {
+.card__item {
+    margin-left: -35px;
+}
+.card__item-media {
     justify-content: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
