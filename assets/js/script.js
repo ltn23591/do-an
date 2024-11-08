@@ -246,10 +246,10 @@ listDanhmuc.forEach((item) => {
         document.getElementById("NoiThat-scroll").scrollIntoView({
             behavior: "smooth", // Hiệu ứng cuộn mượt mà
         });
-        document.getElementById("Laptop-scroll").scrollIntoView({
+        document.getElementById("watch-scroll").scrollIntoView({
             behavior: "smooth", // Hiệu ứng cuộn mượt mà
         });
-        document.getElementById("watch-scroll").scrollIntoView({
+        document.getElementById("Laptop-scroll-move").scrollIntoView({
             behavior: "smooth", // Hiệu ứng cuộn mượt mà
         });
     });
