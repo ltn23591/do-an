@@ -966,7 +966,6 @@ hr {
   align-items: center;
   gap: 20px;
   row-gap: 30px;
-  overflow-y: hidden;
 }
 .product__item {
   padding: 15px 12px;
